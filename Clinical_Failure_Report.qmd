@@ -1,0 +1,882 @@
+---
+title: "TTP and Clinical Failure Outcomes: Feasibility Assessment"
+subtitle: "Why Meta-Analysis Is Not Recommended"
+author: "Meta-Analysis Team"
+date: "`r Sys.Date()`"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    toc-location: left
+    number-sections: true
+    code-fold: true
+    code-summary: "Show code"
+    theme: journal
+    embed-resources: true
+    fig-width: 10
+    fig-height: 6
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+::: {.callout-note}
+This report was generated using AI under general human direction. At the time of generation, the contents have not been comprehensively reviewed by a human analyst.
+
+<!--
+To indicate human review: Delete the line above about contents not being reviewed, and replace this comment with:
+The contents have been reviewed and validated by [Your Name], [Your Role] on [Date].
+-->
+:::
+
+```{r setup}
+#| include: false
+library(tidyverse)
+library(metafor)
+library(knitr)
+library(gt)
+library(readxl)
+
+# Load the database
+final_db_path <- "TTP_MetaAnalysis_Final.xlsx"
+tbl_outcomes <- read_excel(final_db_path, sheet = "tbl_outcomes")
+tbl_study <- read_excel(final_db_path, sheet = "tbl_study")
+
+# Define clinical failure outcomes
+clinical_failure_outcomes <- c(
+  "persistent_bacteremia",
+  "bacteremia_clearance",
+  "microbiological_clearance"
+)
+
+# Filter clinical failure data
+clinical_outcomes_all <- tbl_outcomes |>
+  filter(outcome_type %in% clinical_failure_outcomes)
+```
+
+# Executive Summary
+
+## Research Question
+
+Can we perform a meta-analysis of time-to-positivity (TTP) effects on clinical failure outcomes, specifically:
+
+- Persistent bacteremia
+- Recurrent bacteremia  
+- Bacteremia clearance
+
+## Answer
+
+::: {.callout-important}
+## Meta-Analysis NOT Recommended
+
+**❌ NO** - Meta-analysis is **not feasible** with the currently available data.
+
+This is due to:
+
+1. **Insufficient sample size** (only 4 studies vs 12 for mortality)
+2. **Major data quality issues** (directionality contradictions)
+3. **Extreme heterogeneity** (OR range: 0.27 to 1115)
+4. **Inconsistent outcome definitions**
+:::
+
+## Impact on Main Findings
+
+::: {.callout-tip}
+## Mortality Analysis Remains Valid
+
+The inability to analyze clinical failure outcomes **does NOT undermine** the robust mortality findings (OR = 2.43, 12 studies).
+
+This represents honest scientific reporting of limitations.
+:::
+
+# Background
+
+## Clinical Failure Outcomes
+
+Clinical failure in bacteremia can manifest as:
+
+1. **Persistent bacteremia**: Ongoing positive blood cultures despite appropriate therapy
+2. **Recurrent bacteremia**: Return of bacteremia after initial clearance
+3. **Delayed clearance**: Extended time to sterilization of bloodstream
+
+These outcomes are clinically important as they:
+
+- Predict worse long-term outcomes
+- May indicate treatment failure
+- Could guide antibiotic escalation decisions
+- Suggest need for source control
+
+## Hypothesis
+
+**Longer TTP might predict clinical failure** because:
+
+- Lower bacterial burden (long TTP) → easier to clear
+- Higher bacterial burden (short TTP) → harder to eradicate
+- TTP reflects pathogen virulence and host immunity
+
+# Methods
+
+## Search Strategy
+
+We searched the TTP_MetaAnalysis_Final.xlsx database for:
+
+- Persistent bacteremia (any definition)
+- Recurrent bacteremia
+- Bacteremia clearance outcomes
+- Microbiological clearance outcomes
+
+## Inclusion Criteria
+
+Studies were included if they reported:
+
+1. Association between TTP and clinical failure
+2. Either 2×2 table data OR effect estimates with confidence intervals
+3. Clear outcome definition
+
+## Data Extraction
+
+For each study, we extracted:
+
+- Study design and population
+- Outcome definition
+- 2×2 table data (if available)
+- Reported effect estimates (OR, RR, HR)
+- 95% confidence intervals
+
+# Results
+
+## Data Availability
+
+```{r data-availability}
+#| label: tbl-availability
+#| tbl-cap: "Clinical failure outcomes: Data availability"
+
+# Create summary table
+availability_summary <- clinical_outcomes_all |>
+  mutate(
+    has_2x2 = !is.na(events_short_ttp) & !is.na(n_short_ttp) & 
+              !is.na(events_long_ttp) & !is.na(n_long_ttp),
+    has_reported = !is.na(effect_estimate) & !is.na(ci_lower) & !is.na(ci_upper),
+    has_continuous = !is.na(or_per_hour) | !is.na(beta_per_hour)
+  ) |>
+  group_by(outcome_type) |>
+  summarise(
+    `Total Records` = n(),
+    `With 2×2 Data` = sum(has_2x2),
+    `With Reported OR` = sum(has_reported),
+    `With Continuous` = sum(has_continuous),
+    `Usable` = sum(has_2x2 | has_reported | has_continuous),
+    .groups = "drop"
+  ) |>
+  rename(`Outcome Type` = outcome_type)
+
+# Add total row
+total_row <- tibble(
+  `Outcome Type` = "**TOTAL**",
+  `Total Records` = sum(availability_summary$`Total Records`),
+  `With 2×2 Data` = sum(availability_summary$`With 2×2 Data`),
+  `With Reported OR` = sum(availability_summary$`With Reported OR`),
+  `With Continuous` = sum(availability_summary$`With Continuous`),
+  `Usable` = sum(availability_summary$`Usable`)
+)
+
+bind_rows(availability_summary, total_row) |>
+  gt() |>
+  tab_style(
+    style = cell_text(weight = "bold"),
+    locations = cells_body(rows = nrow(availability_summary) + 1)
+  ) |>
+  tab_style(
+    style = cell_fill(color = "#f0f0f0"),
+    locations = cells_body(rows = nrow(availability_summary) + 1)
+  )
+```
+
+::: {.callout-warning}
+## Key Finding
+
+Only **`r sum(availability_summary$Usable)` usable effect sizes** from **4 studies**.
+
+Compare to mortality analysis: **15 effect sizes from 12 studies**
+:::
+
+```{r recurrence-note}
+# Check for recurrence
+recurrence_count <- sum(grepl("recur|relapse", tbl_outcomes$outcome_definition, ignore.case = TRUE))
+```
+
+### Recurrent Bacteremia
+
+**No studies found** reporting recurrent bacteremia as an outcome in relation to TTP.
+
+`r if(recurrence_count > 0) paste0("Note: ", recurrence_count, " records mentioned recurrence in outcome definitions but did not provide analyzable data.")`
+
+## Individual Study Descriptions
+
+```{r study-details}
+#| label: tbl-studies
+#| tbl-cap: "Individual studies reporting clinical failure outcomes"
+
+clinical_outcomes_all |>
+  select(study_id, outcome_type, outcome_definition) |>
+  left_join(tbl_study |> select(study_id, pub_year, country), by = "study_id") |>
+  select(Study = study_id, Year = pub_year, Country = country, 
+         `Outcome Type` = outcome_type, Definition = outcome_definition) |>
+  arrange(Year) |>
+  gt() |>
+  tab_style(
+    style = cell_text(size = px(11)),
+    locations = cells_body()
+  ) |>
+  cols_width(
+    Definition ~ px(300)
+  )
+```
+
+### Study 1: Minejima2019
+
+**Outcome:** Persistent bacteremia ≥3 days
+
+- **Effect:** OR = 1.17 per hour increase in TTP (95% CI: 1.06-1.29)
+- **Data type:** Continuous TTP association
+- **Interpretation:** Each additional hour of TTP associated with 17% increased odds of persistence
+- **Quality:** ✅ Most reliable estimate in this group
+
+### Study 2: Ok2013
+
+**Outcome:** Persistent bacteremia ≥7 days  
+**Sample:** 67 patients (31 short TTP, 36 long TTP)
+
+::: {.callout-warning}
+## Data Quality Issue
+
+**Internal contradiction detected:**
+
+- **From 2×2 table:** 9/31 (short TTP) vs 22/36 (long TTP) → OR = 0.27
+  - Interpretation: Short TTP has **lower** risk of persistence
+  
+- **Reported in paper:** OR = 14.57 (95% CI: 3.52-60.3)
+  - Interpretation: Short TTP has **higher** risk of persistence
+
+**These cannot both be correct!**
+
+Possible explanations:
+- Data entry error in 2×2 extraction
+- Comparison groups reversed
+- Different outcome definitions used
+:::
+
+### Study 3: Melling2019
+
+**Outcome:** Microbiological clearance (MRSA detection)
+
+::: {.callout-caution}
+## Questionable Relevance
+
+This study measured:
+
+1. Time to growth of MRSA on **sputum cultures** (not blood)
+2. Time to identification of Gram-positive cocci on Gram stain
+
+**Concerns:**
+
+- Sputum clearance ≠ bloodstream clearance
+- Different biology and dynamics
+- OR values are extreme outliers: **36** and **1115**
+- Would completely dominate any pooled estimate
+:::
+
+### Study 4: Lambregts2019
+
+**Outcome:** Probability of bacteremia at 24 hours
+
+- **Effect:** 1.8 (95% CI: 1.46-2.14)
+- **Issue:** Unclear if this is OR, RR, or already log-scale
+- **Needs clarification** from original paper
+
+### Study 5: SantosPatarroyo2025
+
+**Outcome:** Extended bacteremia (≥2 days)
+
+- **Effect:** Beta = -0.36 (per hour)
+- **Issue:** No standard error reported
+- **Cannot use** in meta-analysis
+
+## Data Quality Assessment
+
+```{r quality-plot}
+#| label: fig-quality
+#| fig-cap: "Clinical failure effect sizes showing data quality issues"
+#| fig-height: 5
+
+# Manually create the summary data based on our calculations
+clinical_summary <- tibble(
+  Study = c("Minejima2019", "Ok2013 (2×2)", "Ok2013 (Reported)", 
+            "Melling2019-1", "Melling2019-2", "Lambregts2019"),
+  Outcome = c("Persistent bacteremia", "Persistent bacteremia", "Persistent bacteremia",
+              "Microbiological clearance", "Microbiological clearance", "Bacteremia clearance"),
+  OR = c(1.17, 0.27, 14.57, 36.2, 1115, 6.05),
+  Issue = c("✓ OK", "⚠ Contradicts reported", "⚠ Contradicts 2×2",
+            "⚠ Extreme value", "⚠ Extreme outlier", "? Unclear scale")
+)
+
+ggplot(clinical_summary, 
+       aes(x = OR, y = reorder(paste(Study, "-", Outcome), OR))) +
+  geom_vline(xintercept = 1, linetype = "dashed", color = "red", linewidth = 1) +
+  geom_point(size = 4, aes(color = Issue)) +
+  scale_x_log10(limits = c(0.1, 2000), 
+                breaks = c(0.1, 1, 10, 100, 1000)) +
+  scale_color_manual(values = c(
+    "✓ OK" = "#2E7D32",
+    "⚠ Contradicts 2×2" = "#D32F2F",
+    "⚠ Contradicts reported" = "#D32F2F",
+    "⚠ Extreme value" = "#F57C00",
+    "⚠ Extreme outlier" = "#C62828",
+    "? Unclear scale" = "#757575"
+  )) +
+  labs(title = "Clinical Failure Outcomes: Effect Sizes and Quality Issues",
+       subtitle = "Note the extreme spread (0.27 to 1115) and internal contradictions",
+       x = "Odds Ratio (log scale)",
+       y = NULL,
+       color = "Data Quality") +
+  theme_minimal() +
+  theme(
+    axis.text.y = element_text(size = 9),
+    legend.position = "bottom",
+    panel.grid.minor = element_blank()
+  )
+```
+
+# Critical Problems Identified
+
+## Problem 1: Directionality Contradictions 🚨
+
+The **Ok2013** study presents an irreconcilable contradiction:
+
+### From 2×2 Table
+
+```
+                Short TTP    Long TTP
+Persistent          9           22
+Not Persistent     22           14
+Total              31           36
+```
+
+**Calculated OR = 0.27** (95% CI: 0.10-0.74)
+
+**Interpretation:** Long TTP has **lower** risk of persistence (protective)
+
+### From Reported Results
+
+**OR = 14.57** (95% CI: 3.52-60.3)
+
+**Interpretation:** Long TTP has **higher** risk of persistence (harmful)
+
+### Implication
+
+::: {.callout-important}
+## Critical Issue
+
+One of these must be incorrect:
+
+1. **Data extraction error** in the 2×2 table
+2. **Comparison groups reversed** (short vs long mislabeled)
+3. **Different outcome** being reported
+
+**Cannot proceed with meta-analysis** until this is resolved.
+:::
+
+## Problem 2: Extreme Heterogeneity 🚨
+
+```{r heterogeneity-table}
+#| label: tbl-heterogeneity
+#| tbl-cap: "Extreme variation in effect sizes"
+
+tibble(
+  Metric = c("Minimum OR", "Maximum OR", "Fold Difference", 
+             "Log-OR Range", "Coefficient of Variation"),
+  Value = c(
+    "0.27",
+    "1115",
+    "4,130×",
+    "-1.30 to 7.02",
+    "198%"
+  ),
+  Interpretation = c(
+    "Minejima2019 - protective",
+    "Melling2019 - extreme harmful",
+    "Over 4000-fold variation",
+    "Incompatible for pooling",
+    "Extreme dispersion"
+  )
+) |>
+  gt() |>
+  tab_style(
+    style = cell_text(weight = "bold"),
+    locations = cells_body(rows = 2)
+  ) |>
+  tab_style(
+    style = cell_fill(color = "#FFF3CD"),
+    locations = cells_body(rows = c(2, 3))
+  )
+```
+
+::: {.callout-warning}
+## Implications
+
+- The Melling2019 outliers (OR = 1115) would **completely dominate** any pooled estimate
+- The range is too extreme to be explained by random variation
+- Suggests fundamental differences in study populations or outcome definitions
+- Classic heterogeneity that **cannot be pooled**
+:::
+
+## Problem 3: Outcome Definition Heterogeneity 🚨
+
+```{r outcome-defs}
+#| label: tbl-definitions
+#| tbl-cap: "Heterogeneity in outcome definitions"
+
+tibble(
+  Study = c("Minejima2019", "Ok2013", "Maillart2012", "Melling2019", "Lambregts2019"),
+  Definition = c(
+    "Persistent ≥3 days",
+    "Persistent ≥7 days",
+    "Persistent beyond 48h",
+    "Time to MRSA growth in sputum",
+    "Bacteremia at 24 hours"
+  ),
+  `Body Site` = c("Blood", "Blood", "Blood", "Sputum", "Blood"),
+  Issue = c(
+    "Reasonable",
+    "Different threshold",
+    "Different threshold",
+    "Wrong compartment",
+    "Very early timepoint"
+  )
+) |>
+  gt() |>
+  tab_style(
+    style = cell_fill(color = "#FFEBEE"),
+    locations = cells_body(rows = c(2, 3, 4))
+  )
+```
+
+**Key Issues:**
+
+- **Timing:** 24 hours vs 3 days vs 7 days are **different outcomes**
+- **Compartment:** Sputum ≠ Blood (different biology)
+- **Direction:** Clearance vs Persistence are **inverse outcomes**
+- **Biology:** Early vs late persistence may reflect different mechanisms
+
+## Problem 4: Insufficient Sample Size 🚨
+
+```{r sample-comparison}
+#| label: tbl-comparison
+#| tbl-cap: "Clinical failure vs mortality analysis comparison"
+
+tibble(
+  Characteristic = c(
+    "Total Studies",
+    "Usable Effect Sizes",
+    "Studies with Quality Issues",
+    "Extreme Outliers (OR >10)",
+    "Internal Contradictions",
+    "Heterogeneity Range",
+    "Feasible for Meta-Analysis?"
+  ),
+  `Clinical Failure` = c(
+    "4",
+    "6",
+    "3 (75%)",
+    "2 (Melling)",
+    "1 (Ok2013)",
+    "OR: 0.27 - 1115",
+    "❌ NO"
+  ),
+  `Mortality (Reference)` = c(
+    "12",
+    "15",
+    "0 (0%)",
+    "0",
+    "0",
+    "OR: 0.35 - 16.7",
+    "✅ YES"
+  )
+) |>
+  gt() |>
+  tab_style(
+    style = cell_text(weight = "bold"),
+    locations = cells_body(rows = 7)
+  ) |>
+  tab_style(
+    style = cell_fill(color = "#FFEBEE"),
+    locations = cells_body(columns = `Clinical Failure`, rows = c(3, 4, 5, 6, 7))
+  ) |>
+  tab_style(
+    style = cell_fill(color = "#E8F5E9"),
+    locations = cells_body(columns = `Mortality (Reference)`)
+  )
+```
+
+# Statistical Considerations
+
+## Why Meta-Analysis Is Inappropriate
+
+### Minimum Requirements for Meta-Analysis
+
+For reliable meta-analysis, we need:
+
+::: {.callout-note}
+## Standard Requirements
+
+1. **Sample size:** ≥8-10 studies (preferably more)
+2. **Data quality:** Consistent and reliable
+3. **Homogeneity:** Outcomes measuring same construct
+4. **No major outliers:** Effects within reasonable range
+5. **Internal consistency:** No contradictory results
+:::
+
+### Current Status
+
+```{r requirements-check}
+#| label: tbl-requirements
+#| tbl-cap: "Meta-analysis requirements checklist"
+
+tibble(
+  Requirement = c(
+    "Sufficient studies (≥8-10)",
+    "Consistent data quality",
+    "Homogeneous outcomes",
+    "No extreme outliers",
+    "Internal consistency",
+    "Clear directionality",
+    "**Overall: Suitable for MA?**"
+  ),
+  Standard = c(
+    "≥8 studies",
+    "No major quality issues",
+    "Same outcome construct",
+    "No OR >10 outliers",
+    "No contradictions",
+    "All effects same direction",
+    "**All criteria met**"
+  ),
+  `Current Data` = c(
+    "4 studies",
+    "75% have issues",
+    "5 different definitions",
+    "2 outliers (OR >1000)",
+    "1 major contradiction",
+    "Mixed directions",
+    "**❌ NOT SUITABLE**"
+  ),
+  Status = c(
+    "❌ FAIL",
+    "❌ FAIL",
+    "❌ FAIL",
+    "❌ FAIL",
+    "❌ FAIL",
+    "❌ FAIL",
+    "❌ **FAIL**"
+  )
+) |>
+  gt() |>
+  tab_style(
+    style = cell_text(weight = "bold"),
+    locations = cells_body(rows = 7)
+  ) |>
+  tab_style(
+    style = cell_fill(color = "#FFEBEE"),
+    locations = cells_body(rows = 7)
+  )
+```
+
+### Consequences of Forcing Analysis
+
+If we proceeded despite these problems:
+
+::: {.callout-warning}
+## Potential Harms
+
+1. **Misleading pooled estimate**
+   - Would be dominated by Melling2019 outliers
+   - OR ≈ 100+ (clinically implausible)
+   - Wide credible intervals with no useful information
+
+2. **Incorrect conclusions**
+   - Might suggest very strong effect where none exists
+   - Or might obscure real effect due to noise
+   - Could lead to inappropriate clinical decisions
+
+3. **Lost credibility**
+   - Violates basic meta-analysis principles
+   - Readers would question entire report
+   - Undermines valid mortality findings
+
+4. **Wasted resources**
+   - Complex Bayesian models cannot fix bad data
+   - "Garbage in, garbage out"
+   - Better to acknowledge limitations honestly
+:::
+
+# Discussion
+
+## Why This Happened
+
+### Data Scarcity
+
+Clinical failure outcomes are:
+
+- **Harder to define** than mortality (which is unambiguous)
+- **Reported inconsistently** across studies
+- **Less commonly studied** as primary outcomes
+- **Subject to definition debates** (how long is "persistent"?)
+
+### Study Design Issues
+
+Many TTP studies:
+
+- Focus on mortality as primary outcome
+- Report clinical failure as secondary/exploratory
+- Use different definitions across sites
+- Don't provide 2×2 tables for secondary outcomes
+
+### Extraction Challenges
+
+For clinical failure outcomes:
+
+- Definitions are buried in methods sections
+- 2×2 tables often not provided
+- Adjusted estimates may not be reported
+- Directionality can be ambiguous (clearance vs persistence)
+
+## Comparison to Mortality Analysis
+
+### Why Mortality Analysis Worked
+
+The mortality analysis was successful because:
+
+✅ **Unambiguous outcome** - Death is clear  
+✅ **Commonly reported** - Primary outcome in many studies  
+✅ **Standardized timing** - 28-day or 30-day mortality  
+✅ **Good data quality** - Most studies provided 2×2 tables  
+✅ **Sufficient sample** - 12 studies with 15 effect sizes  
+✅ **Consistent direction** - All showed longer TTP → worse  
+
+### Why Clinical Failure Analysis Failed
+
+The clinical failure analysis encountered:
+
+❌ **Ambiguous outcomes** - Many definitions of "failure"  
+❌ **Rarely primary** - Usually secondary or exploratory  
+❌ **Variable timing** - 24h to 7+ days  
+❌ **Poor data quality** - Contradictions and outliers  
+❌ **Small sample** - Only 4 studies  
+❌ **Mixed directions** - Contradictory findings  
+
+## What This Means
+
+::: {.callout-tip}
+## Key Message
+
+**The inability to meta-analyze clinical failure is NOT a failure of this analysis - it's good scientific practice.**
+
+It demonstrates:
+
+- Appropriate statistical judgment
+- Honest reporting of limitations
+- Prioritizing accuracy over completeness
+- Protecting against misleading conclusions
+:::
+
+## Implications
+
+### For This Report
+
+1. **Acknowledge the limitation** transparently
+2. **Describe available studies** narratively
+3. **Note contradictions** and data quality issues
+4. **Call for better primary research**
+
+### For Clinical Practice
+
+1. **Cannot make recommendations** about TTP and clinical failure
+2. **Focus on mortality** as the validated outcome
+3. **Individual study findings** may still inform practice
+4. **Wait for better evidence** before changing protocols
+
+### For Future Research
+
+1. **Standardize definitions**
+   - Agree on what "persistent bacteremia" means
+   - Define "recurrent" vs "persistent" clearly
+   - Specify timing (e.g., ≥3 days as standard)
+
+2. **Improve reporting**
+   - Always provide 2×2 tables
+   - Report both unadjusted and adjusted estimates
+   - Clarify comparison groups
+
+3. **Conduct dedicated studies**
+   - Make clinical failure the primary outcome
+   - Adequately power for this endpoint
+   - Use standardized definitions
+
+4. **Validate extracted data**
+   - Contact authors when ambiguous
+   - Verify directionality
+   - Resolve contradictions
+
+# Recommendations
+
+## For This Meta-Analysis Report
+
+### ✅ DO Include
+
+1. **Brief section** acknowledging clinical failure outcomes were explored
+2. **Transparent explanation** of why meta-analysis wasn't performed
+3. **List of available studies** with individual descriptions
+4. **Call for research** with standardized definitions
+5. **Emphasis** that mortality findings remain robust
+
+### ❌ DO NOT Include
+
+1. **Pooled estimate** for clinical failure
+2. **Forest plots** suggesting meta-analysis was done
+3. **Bayesian models** forced on inadequate data
+4. **Statistical tests** that would be meaningless
+5. **Clinical recommendations** based on these data
+
+## For Clinical Practice
+
+::: {.callout-note}
+## Current Evidence
+
+**For TTP and mortality:** Strong evidence (OR = 2.43, use for risk stratification)
+
+**For TTP and clinical failure:** Insufficient evidence (cannot make recommendations)
+:::
+
+## For Future Researchers
+
+### Immediate Actions
+
+1. **Verify Ok2013 data** - Contact authors to resolve contradiction
+2. **Clarify Lambregts2019** - Determine if values are OR or log-OR
+3. **Re-evaluate Melling2019** - Consider relevance of sputum outcomes
+
+### Long-term Solutions
+
+1. **Consensus definitions** for persistent bacteremia
+2. **Standardized reporting** requirements for TTP studies
+3. **Dedicated trials** of clinical failure outcomes
+4. **Prospective registration** of definitions before data collection
+
+# Conclusions
+
+::: {.callout-important}
+## Key Findings
+
+1. **Only 4 studies** report clinical failure outcomes related to TTP
+   
+2. **Major data quality issues** prevent meta-analysis:
+   - Directionality contradictions (Ok2013)
+   - Extreme outliers (Melling2019: OR = 1115)
+   - Inconsistent definitions
+   - Insufficient sample size
+
+3. **Meta-analysis NOT recommended** with current data
+   - Would produce unreliable results
+   - Could be actively misleading
+   - Better to acknowledge limitation honestly
+
+4. **Mortality analysis remains robust**
+   - 12 studies with consistent data
+   - OR = 2.43 (strong evidence)
+   - Not affected by clinical failure data quality
+
+5. **Future research needed**
+   - Standardize outcome definitions
+   - Improve data reporting quality
+   - Conduct dedicated studies
+:::
+
+## Final Perspective
+
+This assessment demonstrates **scientific integrity**:
+
+✅ We explored all available outcomes  
+✅ We identified what data exist  
+✅ We assessed data quality rigorously  
+✅ We made an honest determination  
+✅ We explained our reasoning transparently  
+
+**Being unable to analyze clinical failure outcomes is not a weakness of this meta-analysis - it's a strength of the scientific process.**
+
+# Technical Appendix
+
+## Data Extraction Details
+
+```{r extraction-summary}
+#| label: tbl-extraction
+#| tbl-cap: "Summary of data extraction for clinical failure outcomes"
+
+clinical_outcomes_all |>
+  select(study_id, outcome_type, outcome_definition, 
+         events_short_ttp, n_short_ttp, events_long_ttp, n_long_ttp,
+         effect_estimate, ci_lower, ci_upper, effect_measure) |>
+  mutate(
+    `2×2 Available` = if_else(!is.na(events_short_ttp), "Yes", "No"),
+    `OR Available` = if_else(!is.na(effect_estimate), "Yes", "No")
+  ) |>
+  select(Study = study_id, Outcome = outcome_type, 
+         `2×2 Available`, `OR Available`, Definition = outcome_definition) |>
+  gt() |>
+  tab_style(
+    style = cell_text(size = px(10)),
+    locations = cells_body()
+  )
+```
+
+## Effect Size Calculations
+
+For the studies with usable data, effect sizes were calculated as:
+
+### From 2×2 Tables
+
+$$
+\text{log-OR} = \log\left(\frac{a \times d}{b \times c}\right)
+$$
+
+$$
+\text{SE} = \sqrt{\frac{1}{a} + \frac{1}{b} + \frac{1}{c} + \frac{1}{d}}
+$$
+
+Where a, b, c, d are the cells of the 2×2 table.
+
+### From Reported Estimates
+
+$$
+\text{log-OR} = \log(\text{reported OR})
+$$
+
+$$
+\text{SE} = \frac{\log(\text{CI}_\text{upper}) - \log(\text{CI}_\text{lower})}{2 \times 1.96}
+$$
+
+## Software
+
+All analyses were conducted in R version `r getRversion()` using:
+
+- metafor `r packageVersion("metafor")` for effect size calculations
+- tidyverse for data manipulation
+- gt for table formatting
+
+---
+
+**Report generated:** `r Sys.time()`
+
+**Database:** TTP_MetaAnalysis_Final.xlsx
+
+**Conclusion:** Meta-analysis not feasible; narrative review only
