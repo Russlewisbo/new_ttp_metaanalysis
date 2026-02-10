@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TTP Meta-Analysis Reports</title>
+    <style>
+        :root {
+            --primary-color: #2C3E50;
+            --secondary-color: #3498DB;
+            --success-color: #27AE60;
+            --warning-color: #E74C3C;
+            --light-bg: #ECF0F1;
+            --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2rem 1rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+        
+        header {
+            background: var(--primary-color);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 3rem 2rem;
+        }
+        
+        .intro {
+            background: var(--light-bg);
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 3rem;
+        }
+        
+        .intro h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .reports-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .report-card {
+            background: white;
+            border: 2px solid var(--light-bg);
+            border-radius: 15px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .report-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--card-shadow);
+            border-color: var(--secondary-color);
+        }
+        
+        .report-card.primary {
+            border-color: var(--success-color);
+            border-width: 3px;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .badge.primary {
+            background: var(--success-color);
+            color: white;
+        }
+        
+        .badge.secondary {
+            background: var(--secondary-color);
+            color: white;
+        }
+        
+        .report-card h3 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .report-card p {
+            color: #666;
+            margin-bottom: 1.5rem;
+            min-height: 100px;
+        }
+        
+        .report-card ul {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+        
+        .report-card ul li {
+            padding: 0.3rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .report-card ul li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--success-color);
+            font-weight: bold;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--secondary-color);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background: #2980B9;
+            transform: translateX(5px);
+        }
+        
+        .btn.primary {
+            background: var(--success-color);
+            font-size: 1.1rem;
+        }
+        
+        .btn.primary:hover {
+            background: #229954;
+        }
+        
+        .key-findings {
+            background: #FFF9E6;
+            border-left: 4px solid #F39C12;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 3rem;
+        }
+        
+        .key-findings h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .finding-highlight {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            font-weight: 500;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .stat-box {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            border: 2px solid var(--light-bg);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+            display: block;
+        }
+        
+        .stat-label {
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+        
+        footer {
+            background: var(--primary-color);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        footer a {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .reports-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .content {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔬 Time-to-Positivity Meta-Analysis</h1>
+            <p>Bayesian Evidence Synthesis on TTP and Clinical Outcomes in Bacteremia</p>
+            <p style="font-size: 0.9rem; margin-top: 0.5rem; opacity: 0.8;">February 2026</p>
+        </header>
+        
+        <div class="content">
+            <div class="intro">
+                <h2>📊 Project Overview</h2>
+                <p>This project presents a comprehensive Bayesian meta-analysis examining the association between blood culture time-to-positivity (TTP) and clinical outcomes in bacteremia patients. The analysis includes 20 studies with structured data extraction and rigorous statistical methods.</p>
+            </div>
+            
+            <div class="key-findings">
+                <h2>🎯 Key Findings</h2>
+                <div class="finding-highlight">
+                    <strong>Primary Result:</strong> Longer TTP is strongly associated with increased mortality (OR = 2.43, 95% CrI: 1.38-4.20, 99.8% probability harmful)
+                </div>
+                <div class="finding-highlight">
+                    <strong>Critical Discovery:</strong> TTP cutpoint choice significantly affects observed effect size (-0.032 log-OR per hour, 98.6% probability). Studies using 10h cutpoints show OR ≈ 2.5, while 72h cutpoints show OR ≈ 0.4.
+                </div>
+                <div class="finding-highlight">
+                    <strong>Robustness:</strong> Effect is consistent across pathogen types, data sources, and study designs. Not due to confounding. Stable over 10+ years.
+                </div>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <span class="stat-number">20</span>
+                    <span class="stat-label">Studies in Database</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">12</span>
+                    <span class="stat-label">Studies in Mortality Analysis</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">2.43</span>
+                    <span class="stat-label">Pooled Odds Ratio</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">99.8%</span>
+                    <span class="stat-label">Probability of Harm</span>
+                </div>
+            </div>
+            
+            <h2 style="color: var(--primary-color); margin: 3rem 0 2rem 0;">📄 Available Reports</h2>
+            
+            <div class="reports-grid">
+                <div class="report-card primary">
+                    <span class="badge primary">⭐ PRIMARY REPORT</span>
+                    <h3>Mortality Meta-Analysis</h3>
+                    <p>Comprehensive Bayesian meta-analysis of TTP and mortality outcomes. Includes 12 studies, subgroup analyses, moderator exploration, and sensitivity analyses.</p>
+                    <ul>
+                        <li>Pooled effect estimation</li>
+                        <li>Forest plots & visualizations</li>
+                        <li>Pathogen subgroup analysis</li>
+                        <li>7 moderators explored</li>
+                        <li>Model diagnostics</li>
+                        <li>Clinical implications</li>
+                    </ul>
+                    <a href="TTP_MetaAnalysis_Report.html" class="btn primary">View Main Report →</a>
+                </div>
+                
+                <div class="report-card">
+                    <span class="badge secondary">📋 SUPPLEMENT</span>
+                    <h3>Clinical Failure Assessment</h3>
+                    <p>Detailed feasibility assessment explaining why meta-analysis of clinical failure outcomes (persistent bacteremia, recurrence) was not performed.</p>
+                    <ul>
+                        <li>Data availability review</li>
+                        <li>Quality assessment</li>
+                        <li>Individual study summaries</li>
+                        <li>Future research recommendations</li>
+                        <li>Methodological transparency</li>
+                    </ul>
+                    <a href="Clinical_Failure_Report.html" class="btn">View Supplement →</a>
+                </div>
+            </div>
+            
+            <div style="background: var(--light-bg); padding: 2rem; border-radius: 10px; margin-top: 3rem;">
+                <h2 style="color: var(--primary-color); margin-bottom: 1rem;">💊 Clinical Implications</h2>
+                <div style="display: grid; gap: 1rem;">
+                    <div style="background: white; padding: 1rem; border-radius: 8px;">
+                        <strong>For Clinicians:</strong> TTP is a valid prognostic marker for risk stratification in bacteremia. Use regardless of gram stain result. Consider 10-12h cutpoints for optimal discrimination.
+                    </div>
+                    <div style="background: white; padding: 1rem; border-radius: 8px;">
+                        <strong>For Researchers:</strong> Standardize TTP cutpoints in future studies. Report both continuous and dichotomized data. More studies needed on clinical failure outcomes with consistent definitions.
+                    </div>
+                    <div style="background: white; padding: 1rem; border-radius: 8px;">
+                        <strong>Key Insight:</strong> The choice of TTP cutpoint significantly affects observed effect magnitude. Early bacterial growth (short TTP) has stronger prognostic value than late growth.
+                    </div>
+                </div>
+            </div>
+            
+            <div style="margin-top: 3rem; padding: 2rem; background: #E8F5E9; border-radius: 10px;">
+                <h2 style="color: var(--primary-color); margin-bottom: 1rem;">📚 Additional Resources</h2>
+                <p style="margin-bottom: 1rem;">For detailed information about methods, data sources, and reproducibility:</p>
+                <ul style="list-style: none; padding-left: 0;">
+                    <li style="padding: 0.5rem 0;"><strong>Database:</strong> TTP_MetaAnalysis_Final.xlsx (structured data extraction)</li>
+                    <li style="padding: 0.5rem 0;"><strong>Analysis Code:</strong> Source .qmd files available for full reproducibility</li>
+                    <li style="padding: 0.5rem 0;"><strong>Documentation:</strong> ANALYSIS_README.md and COMPLETE_ANALYSIS_SUMMARY.md</li>
+                </ul>
+            </div>
+        </div>
+        
+        <footer>
+            <p><strong>TTP Meta-Analysis Project</strong></p>
+            <p style="margin: 1rem 0;">Bayesian Evidence Synthesis • February 2026</p>
+            <p style="font-size: 0.9rem; opacity: 0.8;">
+                Reports generated using AI-assisted analysis under human direction.<br>
+                All findings should be independently validated before publication or clinical application.
+            </p>
+            <p style="margin-top: 1rem; font-size: 0.85rem;">
+                For questions or collaboration: See <a href="https://github.com/yourusername/new_ttp_metaanalysis">GitHub Repository</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
