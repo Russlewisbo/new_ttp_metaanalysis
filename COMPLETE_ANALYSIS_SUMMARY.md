@@ -101,7 +101,7 @@ Examine TTP and clinical failure outcomes → **NOT FEASIBLE** (data quality iss
 
 ✅ **Strong Association Confirmed**
 - Pooled OR: **2.43** (95% CrI: 1.38-4.20)
-- 99.8% probability that longer TTP increases mortality
+- 99.8% probability that shorter TTP increases mortality
 - Based on 12 studies with robust data
 
 ✅ **Robust Across Multiple Dimensions**
@@ -181,7 +181,7 @@ Examine TTP and clinical failure outcomes → **NOT FEASIBLE** (data quality iss
 1. **TTP is a valid prognostic marker** for mortality risk stratification
 2. **Use regardless of gram stain** (works for both gram+ and gram-)
 3. **Consider 10-12h cutpoints** for optimal risk discrimination
-4. **~2.4× mortality risk** with longer TTP (clinically significant)
+4. **~2.4× mortality risk** with shorter TTP (clinically significant)
 
 ### For Researchers
 

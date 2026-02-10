@@ -101,10 +101,10 @@ These outcomes are clinically important as they:
 
 ## Hypothesis
 
-**Longer TTP might predict clinical failure** because:
+**Shorter TTP might predict clinical failure** because:
 
-- Lower bacterial burden (long TTP) → easier to clear
 - Higher bacterial burden (short TTP) → harder to eradicate
+- Lower bacterial burden (long TTP) → easier to clear
 - TTP reflects pathogen virulence and host immunity
 
 # Methods
@@ -245,11 +245,11 @@ clinical_outcomes_all |>
 
 **Internal contradiction detected:**
 
-- **From 2×2 table:** 9/31 (short TTP) vs 22/36 (long TTP) → OR = 0.27
-  - Interpretation: Short TTP has **lower** risk of persistence
+- **From 2×2 table:** 9/31 (short TTP) vs 22/36 (long TTP) → OR = 0.27 (short vs long)
+  - Interpretation: Short TTP has **lower** risk of persistence (protective)
   
 - **Reported in paper:** OR = 14.57 (95% CI: 3.52-60.3)
-  - Interpretation: Short TTP has **higher** risk of persistence
+  - Interpretation: Short TTP has **higher** risk of persistence (harmful)
 
 **These cannot both be correct!**
 
@@ -355,15 +355,15 @@ Not Persistent     22           14
 Total              31           36
 ```
 
-**Calculated OR = 0.27** (95% CI: 0.10-0.74)
+**Calculated OR = 0.27** (95% CI: 0.10-0.74) — short vs long TTP
 
-**Interpretation:** Long TTP has **lower** risk of persistence (protective)
+**Interpretation:** Short TTP has **lower** risk of persistence (OR < 1 = short TTP protective)
 
 ### From Reported Results
 
 **OR = 14.57** (95% CI: 3.52-60.3)
 
-**Interpretation:** Long TTP has **higher** risk of persistence (harmful)
+**Interpretation:** Short TTP has **higher** risk of persistence (OR > 1 = short TTP harmful)
 
 ### Implication
 
@@ -654,7 +654,7 @@ The mortality analysis was successful because:
 ✅ **Standardized timing** - 28-day or 30-day mortality  
 ✅ **Good data quality** - Most studies provided 2×2 tables  
 ✅ **Sufficient sample** - 12 studies with 15 effect sizes  
-✅ **Consistent direction** - All showed longer TTP → worse  
+✅ **Consistent direction** - All showed shorter TTP → worse outcomes  
 
 ### Why Clinical Failure Analysis Failed
 

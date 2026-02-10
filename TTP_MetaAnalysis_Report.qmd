@@ -63,11 +63,11 @@ Does time-to-positivity (TTP) in blood cultures predict mortality in patients wi
 ::: {.callout-important}
 ## Primary Result
 
-**Longer TTP is strongly associated with increased mortality risk**
+**Shorter TTP is strongly associated with increased mortality risk**
 
-- Pooled Odds Ratio: **`r round(exp(median(pooled_logOR)), 2)`** (95% CrI: `r round(exp(quantile(pooled_logOR, 0.025)), 2)`–`r round(exp(quantile(pooled_logOR, 0.975)), 2)`)
-- Probability of harm: **`r round(mean(pooled_OR > 1) * 100, 1)`%**
-- Evidence quality: **Strong** (99.8% probability OR > 1)
+- Pooled Odds Ratio (short vs long TTP): **`r round(exp(median(pooled_logOR)), 2)`** (95% CrI: `r round(exp(quantile(pooled_logOR, 0.025)), 2)`–`r round(exp(quantile(pooled_logOR, 0.975)), 2)`)
+- Probability that short TTP is harmful: **`r round(mean(pooled_OR > 1) * 100, 1)`%**
+- Evidence quality: **Strong** (99.8% probability that short TTP increases mortality)
 :::
 
 ### Robustness
@@ -85,18 +85,18 @@ Does time-to-positivity (TTP) in blood cultures predict mortality in patients wi
 **Studies using higher TTP cutpoints report significantly smaller effects**
 
 - Effect: **-0.032 log-OR per hour** (98.6% probability negative)
-- At 10h cutpoint: OR ≈ 2.5
+- At 10h cutpoint: OR ≈ 2.5 (strong association between short TTP and mortality)
 - At 20h cutpoint: OR ≈ 1.8 (28% reduction)
 - At 72h cutpoint: OR ≈ 0.4 (extreme attenuation)
 
-**Implication**: Early bacterial growth has stronger prognostic value than late growth.
+**Implication**: Very rapid bacterial growth (short TTP, best captured by lower cutpoints) is the strongest prognostic signal. Higher cutpoints dilute this signal.
 :::
 
 # Background
 
 ## Clinical Context
 
-Bloodstream infections (bacteremia) are associated with significant morbidity and mortality. Time-to-positivity (TTP) - the time from blood culture incubation to detection of bacterial growth - has been proposed as a prognostic marker. Faster growth (shorter TTP) may indicate higher bacterial burden, more virulent organisms, or compromised host immunity.
+Bloodstream infections (bacteremia) are associated with significant morbidity and mortality. Time-to-positivity (TTP) — the time from blood culture incubation to detection of bacterial growth — has been proposed as a prognostic marker. Faster growth (shorter TTP) may indicate higher bacterial burden, more virulent organisms, or compromised host immunity, and is therefore hypothesised to be associated with worse clinical outcomes.
 
 ## Study Objectives
 
@@ -183,10 +183,11 @@ Where:
 
 ```{r mortality-summary}
 #| label: tbl-overall
-#| tbl-cap: "Overall pooled effect of TTP on mortality"
+#| tbl-cap: "Overall pooled effect of short vs long TTP on mortality (OR > 1 = short TTP associated with higher mortality)"
 
 tibble(
-  Parameter = c("Log-OR", "Odds Ratio", "Probability OR > 1", "Heterogeneity (I²)"),
+  Parameter = c("Log-OR (short vs long TTP)", "Odds Ratio (short vs long TTP)", 
+                "P(short TTP harmful), i.e. P(OR > 1)", "Heterogeneity (I²)"),
   Estimate = c(
     sprintf("%.3f", median(pooled_logOR)),
     sprintf("%.2f", median(pooled_OR)),
@@ -210,16 +211,16 @@ tibble(
 ::: {.callout-tip}
 ## Interpretation
 
-Patients with longer TTP have **`r round(median(pooled_OR), 2)`× the odds of mortality** compared to patients with shorter TTP. There is a **`r round(mean(pooled_OR > 1) * 100, 1)`% probability** that longer TTP increases mortality risk.
+Patients with shorter TTP have **`r round(median(pooled_OR), 2)`× the odds of mortality** compared to patients with longer TTP. There is a **`r round(mean(pooled_OR > 1) * 100, 1)`% probability** that shorter TTP increases mortality risk.
 
-The considerable heterogeneity (I² = `r round(median(i_squared), 1)`%) indicates substantial variation between studies, warranting exploration of moderators.
+This is consistent with the hypothesis that rapid bacterial growth (short TTP) reflects higher bacterial burden and/or greater virulence, leading to worse outcomes. The considerable heterogeneity (I² = `r round(median(i_squared), 1)`%) indicates substantial variation between studies, warranting exploration of moderators.
 :::
 
 ### Forest Plot
 
 ```{r forest-plot}
 #| label: fig-forest
-#| fig-cap: "Forest plot showing individual study effects and pooled estimate"
+#| fig-cap: "Forest plot of odds ratios (short vs long TTP) for mortality. OR > 1 indicates short TTP is associated with higher mortality."
 #| fig-height: 8
 
 # Recreate forest plot data
@@ -258,9 +259,13 @@ ggplot(forest_plot_data, aes(x = or, y = study_id, color = type)) +
   geom_errorbar(aes(xmin = ci_low, xmax = ci_high), width = 0.2, linewidth = 1, orientation = "y") +
   scale_color_manual(values = c("Study" = "steelblue", "Pooled" = "darkred")) +
   scale_x_log10(breaks = c(0.25, 0.5, 1, 2, 4, 8, 16)) +
+  annotate("text", x = 14, y = 1.5, label = "Short TTP riskier →", 
+           color = "gray40", size = 3, fontface = "italic") +
+  annotate("text", x = 0.3, y = 1.5, label = "← Long TTP riskier", 
+           color = "gray40", size = 3, fontface = "italic") +
   labs(title = "Forest Plot: TTP Effect on Mortality",
-       subtitle = "Odds Ratios (95% CI) - Longer vs. Shorter TTP",
-       x = "Odds Ratio (log scale)",
+       subtitle = "Odds Ratios (95% CI) — Short vs Long TTP",
+       x = "OR, short vs long TTP (log scale)",
        y = NULL,
        color = NULL) +
   theme_minimal() +
@@ -291,7 +296,7 @@ Trace plots and posterior distribution plots were inspected during analysis and 
 
 ```{r pathogen-analysis}
 #| label: fig-pathogen
-#| fig-cap: "TTP effect on mortality by pathogen class"
+#| fig-cap: "Forest plot of OR (short vs long TTP) for mortality, stratified by pathogen class. OR > 1 indicates short TTP is associated with higher mortality."
 
 forest_subgroup <- tbl_es_mortality |>
   filter(pathogen_class %in% c("gram_positive", "gram_negative")) |>
@@ -345,8 +350,13 @@ ggplot(forest_all,
   scale_shape_manual(values = c("Study" = 16, "Pooled" = 18), name = NULL) +
   scale_size_manual(values = c("Study" = 3, "Pooled" = 5), name = NULL) +
   scale_x_log10(breaks = c(0.25, 0.5, 1, 2, 4, 8, 16)) +
+  annotate("text", x = 14, y = 0.7, label = "Short TTP riskier →", 
+           color = "gray40", size = 3, fontface = "italic") +
+  annotate("text", x = 0.3, y = 0.7, label = "← Long TTP riskier", 
+           color = "gray40", size = 3, fontface = "italic") +
   labs(title = "Forest Plot: TTP Effect on Mortality by Pathogen Class",
-       x = "Odds Ratio (log scale)",
+       subtitle = "OR (short vs long TTP) — consistent across gram-positive and gram-negative",
+       x = "OR, short vs long TTP (log scale)",
        y = NULL) +
   theme_minimal() +
   theme(
@@ -358,7 +368,7 @@ ggplot(forest_all,
 
 ```{r pathogen-table}
 #| label: tbl-pathogen
-#| tbl-cap: "Subgroup analysis by pathogen class"
+#| tbl-cap: "Subgroup analysis by pathogen class — OR (short vs long TTP) for mortality"
 
 tibble(
   Pathogen = c("Gram-Negative", "Gram-Positive", "Difference"),
@@ -377,7 +387,7 @@ tibble(
     sprintf("[%.2f, %.2f]", quantile(gpos_OR_mr, 0.025), quantile(gpos_OR_mr, 0.975)),
     sprintf("[%.2f, %.2f]", quantile(diff_OR, 0.025), quantile(diff_OR, 0.975))
   ),
-  `P(OR > 1)` = c(
+  `P(short TTP harmful)` = c(
     sprintf("%.1f%%", mean(gneg_OR_mr > 1) * 100),
     sprintf("%.1f%%", mean(gpos_OR_mr > 1) * 100),
     "—"
@@ -393,12 +403,12 @@ tibble(
 ::: {.callout-tip}
 ## Subgroup Interpretation
 
-TTP predicts mortality in **both** gram-positive and gram-negative infections:
+Shorter TTP predicts higher mortality in **both** gram-positive and gram-negative infections:
 
-- **Gram-negative**: OR = `r round(median(gneg_OR_mr), 2)` (99.5% probability harmful)
-- **Gram-positive**: OR = `r round(median(gpos_OR_mr), 2)` (97% probability harmful)
+- **Gram-negative**: OR = `r round(median(gneg_OR_mr), 2)` (99.5% probability that short TTP is harmful)
+- **Gram-positive**: OR = `r round(median(gpos_OR_mr), 2)` (97% probability that short TTP is harmful)
 
-The difference between groups is **not statistically significant** (95% CrI includes 1.0), suggesting TTP is a universal prognostic marker regardless of pathogen type.
+The difference between groups is **not statistically significant** (95% CrI includes 1.0), suggesting short TTP is a universal prognostic marker for mortality regardless of pathogen type.
 :::
 
 ## Moderator Analysis
@@ -407,7 +417,7 @@ The difference between groups is **not statistically significant** (95% CrI incl
 
 ```{r cutpoint-analysis}
 #| label: fig-cutpoint
-#| fig-cap: "TTP effect varies by cutpoint choice - predicted OR across cutpoint range"
+#| fig-cap: "OR (short vs long TTP) for mortality decreases as cutpoint increases, indicating that the prognostic value of short TTP is strongest at low cutpoints."
 #| fig-height: 6
 
 # Prepare predictions
@@ -442,11 +452,15 @@ ggplot(predictions, aes(x = cutpoint, y = median_OR)) +
   annotate("text", x = 50, y = median(pooled_OR), 
            label = sprintf("Overall pooled OR = %.2f", median(pooled_OR)), 
            vjust = -0.5, color = "gray50", size = 3.5) +
+  annotate("text", x = 15, y = 3.9, label = "↑ Short TTP riskier", 
+           hjust = 0, color = "gray40", size = 3, fontface = "italic") +
+  annotate("text", x = 55, y = 0.15, label = "↓ Long TTP riskier", 
+           hjust = 0, color = "gray40", size = 3, fontface = "italic") +
   labs(title = "TTP Cutpoint Significantly Moderates Effect Size",
        subtitle = "Meta-regression: -0.032 log-OR per hour (98.6% probability negative)",
        x = "TTP Cutpoint (hours)",
-       y = "Predicted Odds Ratio for Mortality",
-       caption = "Red points = observed study effects (size ∝ precision)\nBlue line = Bayesian meta-regression prediction") +
+       y = "Predicted OR (short vs long TTP) for Mortality",
+       caption = "Red points = observed study effects (size ∝ precision)\nBlue line = Bayesian meta-regression prediction\nOR > 1 = short TTP associated with higher mortality") +
   theme_minimal() +
   theme(panel.grid.minor = element_blank())
 ```
@@ -456,11 +470,11 @@ ggplot(predictions, aes(x = cutpoint, y = median_OR)) +
 
 **The choice of TTP cutpoint significantly affects the observed effect size** (slope = -0.032 log-OR per hour, 98.6% probability < 0).
 
-This finding has important implications:
+As the cutpoint increases, the effect of short TTP on mortality diminishes. This has important implications:
 
-1. **Earlier growth detection** (8-12h cutpoints) identifies highest-risk patients
-2. **Later cutpoints** (>24h) may miss important prognostic information
-3. The relationship is **non-linear** - not all hours of TTP are equally informative
+1. **Lower cutpoints** (8-12h) best discriminate high-risk patients with very rapid bacterial growth
+2. **Higher cutpoints** (>24h) dilute the short-TTP group, weakening the prognostic signal
+3. The relationship is **non-linear** — very rapid growth (short TTP) is the strongest prognostic marker
 4. This partly explains the substantial heterogeneity between studies
 :::
 
@@ -468,17 +482,17 @@ This finding has important implications:
 
 ```{r moderator-summary}
 #| label: tbl-moderators
-#| tbl-cap: "Summary of all moderator and sensitivity analyses"
+#| tbl-cap: "Summary of all moderator and sensitivity analyses. Effect sizes are changes in log-OR (short vs long TTP) per unit of each moderator; negative values mean the short-TTP mortality effect weakens."
 
 tibble(
   Moderator = c(
-    "TTP Cutpoint (per 10h)",
-    "Pathogen: Gram+ vs Gram-",
+    "TTP Cutpoint (per 10h increase)",
+    "Pathogen: Gram+ vs Gram−",
     "Data Source: 2×2 vs Reported",
     "Adjustment Status",
     "Publication Year (per 5y)"
   ),
-  `Effect Size` = c(
+  `Δ log-OR` = c(
     sprintf("%.3f", median(cutpoint_slope) * 10),
     sprintf("%.3f", median(diff_logOR)),
     sprintf("%.3f", median(diff_sources)),
@@ -492,12 +506,12 @@ tibble(
     sprintf("[%.3f, %.3f]", quantile(adj_effect, 0.025), quantile(adj_effect, 0.975)),
     sprintf("[%.3f, %.3f]", quantile(year_slope, 0.025) * 5, quantile(year_slope, 0.975) * 5)
   ),
-  `P(Direction)` = c(
-    sprintf("%.1f%%", mean(cutpoint_slope < 0) * 100),
-    sprintf("%.1f%%", mean(diff_logOR < 0) * 100),
-    sprintf("%.1f%%", mean(diff_sources < 0) * 100),
-    sprintf("%.1f%%", mean(adj_effect > 0) * 100),
-    sprintf("%.1f%%", mean(year_slope < 0) * 100)
+  `P(expected direction)` = c(
+    sprintf("%.1f%% (attenuates)", mean(cutpoint_slope < 0) * 100),
+    sprintf("%.1f%% (Gram+ smaller)", mean(diff_logOR < 0) * 100),
+    sprintf("%.1f%% (2×2 smaller)", mean(diff_sources < 0) * 100),
+    sprintf("%.1f%% (adjusted larger)", mean(adj_effect > 0) * 100),
+    sprintf("%.1f%% (declines)", mean(year_slope < 0) * 100)
   ),
   Conclusion = c(
     "⚠ Significant moderator",
@@ -524,7 +538,7 @@ tibble(
 
 ```{r sensitivity-source}
 #| label: fig-sensitivity
-#| fig-cap: "Sensitivity analysis: effect by data source"
+#| fig-cap: "Posterior distributions of OR (short vs long TTP) for mortality by data source. All three distributions are centred well above 1, confirming that the short-TTP mortality effect is robust regardless of how effect sizes were derived."
 
 sens_data <- tibble(
   Source = rep(c("Overall", "2×2 Tables", "Reported OR"), each = 12000),
@@ -534,13 +548,15 @@ sens_data <- tibble(
 ggplot(sens_data, aes(x = OR, fill = Source)) +
   geom_density(alpha = 0.5, linewidth = 1) +
   geom_vline(xintercept = 1, linetype = "dashed", color = "red") +
+  annotate("text", x = 1, y = Inf, label = "No effect\n(OR = 1)", 
+           vjust = 1.5, hjust = -0.1, color = "red", size = 3) +
   scale_fill_manual(values = c("Overall" = "gray50", 
                                 "2×2 Tables" = "#E41A1C",
                                 "Reported OR" = "#377EB8")) +
   xlim(0, 8) +
   labs(title = "Sensitivity Analysis: Results by Data Source",
-       subtitle = "Comparing direct 2×2 table calculations vs reported estimates",
-       x = "Odds Ratio",
+       subtitle = "OR (short vs long TTP) — comparing 2×2 table calculations vs reported estimates",
+       x = "OR, short vs long TTP (> 1 = short TTP riskier)",
        y = "Posterior Density") +
   theme_minimal() +
   theme(legend.position = "bottom")
@@ -562,11 +578,11 @@ These sensitivity analyses confirm that the TTP-mortality association is **real 
 
 ## Summary of Evidence
 
-This Bayesian meta-analysis of `r n_distinct(tbl_es_final$study_id)` studies (`r nrow(tbl_es_final)` effect sizes) provides strong evidence that **time-to-positivity is a robust prognostic marker for mortality in bacteremia**. Patients with longer TTP have approximately **2.4× higher odds of death** compared to those with shorter TTP.
+This Bayesian meta-analysis of `r n_distinct(tbl_es_final$study_id)` studies (`r nrow(tbl_es_final)` effect sizes) provides strong evidence that **time-to-positivity is a robust prognostic marker for mortality in bacteremia**. Patients with shorter TTP (i.e., more rapid bacterial growth) have approximately **2.4× higher odds of death** compared to those with longer TTP, consistent with the hypothesis that shorter TTP reflects higher bacterial burden and/or greater pathogen virulence.
 
 ## Key Strengths
 
-1. **Strong statistical evidence**: 99.8% probability of harmful effect
+1. **Strong statistical evidence**: 99.8% probability that short TTP increases mortality
 2. **Robust findings**: Consistent across multiple sensitivity analyses
 3. **Universal applicability**: Works for both gram-positive and gram-negative infections
 4. **Transparent methodology**: Bayesian framework with clear prior specification
@@ -578,8 +594,8 @@ The most important finding from our moderator analysis is that **the choice of T
 
 This finding suggests:
 
-- **Non-linear biology**: Early growth detection captures different prognostic information than late growth
-- **Optimal cutpoint**: Clinical applications should consider 8-12 hour thresholds
+- **Non-linear biology**: Very rapid bacterial growth (short TTP at low cutpoints) is the strongest signal of poor prognosis; higher cutpoints dilute this signal by including more patients in the "short TTP" group
+- **Optimal cutpoint**: Clinical applications should consider 8-12 hour thresholds to maximise prognostic discrimination
 - **Study heterogeneity**: Cutpoint choice explains part of the I² = 76.5% heterogeneity
 
 ## Clinical Implications
@@ -587,19 +603,19 @@ This finding suggests:
 ### For Clinicians
 
 1. **TTP is a valid risk stratification tool**
-   - Can identify high-risk bacteremia patients early
+   - Shorter TTP identifies high-risk bacteremia patients early
    - Applies regardless of gram stain result
    - Should be incorporated into clinical decision-making
 
-2. **Earlier TTP cutpoints are more informative**
+2. **Lower TTP cutpoints are more informative**
    - Consider using 10-12 hour thresholds
-   - Patients with TTP <10-12h have better prognosis
-   - Those with TTP >12h warrant closer monitoring
+   - Patients with TTP <10-12h are at **higher** risk and warrant closer monitoring
+   - Those with TTP >12h have relatively better prognosis
 
 3. **Practical implementation**
    - Modern blood culture systems provide real-time TTP data
    - Can be integrated into sepsis protocols
-   - May guide antibiotic de-escalation or escalation decisions
+   - A very short TTP may prompt earlier escalation of care
 
 ### For Researchers
 
@@ -648,10 +664,10 @@ This is the first comprehensive Bayesian meta-analysis of TTP and mortality in b
 
 ## Future Directions
 
-1. **Individual patient data meta-analysis** to precisely characterize dose-response
+1. **Individual patient data meta-analysis** to precisely characterise the dose-response between TTP and mortality
 2. **Randomized trials** of TTP-guided treatment strategies
-3. **Mechanistic studies** exploring why early growth predicts mortality
-4. **External validation** in prospective cohorts with standardized cutpoints
+3. **Mechanistic studies** exploring why rapid bacterial growth (short TTP) predicts mortality
+4. **External validation** in prospective cohorts with standardised cutpoints
 5. **Economic evaluation** of TTP-based risk stratification
 
 # Conclusions
@@ -659,15 +675,15 @@ This is the first comprehensive Bayesian meta-analysis of TTP and mortality in b
 ::: {.callout-important}
 ## Key Messages
 
-1. **TTP strongly predicts mortality in bacteremia** (OR = 2.43, 99.8% probability harmful)
+1. **Shorter TTP strongly predicts mortality in bacteremia** (OR = 2.43 for short vs long TTP, 99.8% probability harmful)
 
 2. **Effect is robust** across pathogen types, study designs, and data sources
 
-3. **TTP cutpoint choice matters** - earlier cutpoints (8-12h) show stronger prognostic value
+3. **TTP cutpoint choice matters** — lower cutpoints (8-12h) show stronger prognostic value for identifying high-risk patients with rapid bacterial growth
 
-4. **Clinical application recommended** - incorporate TTP into bacteremia risk stratification
+4. **Clinical application recommended** — patients with short TTP should be flagged for closer monitoring and potential escalation of care
 
-5. **Standardization needed** - future research should use consistent cutpoints
+5. **Standardization needed** — future research should use consistent cutpoints (8-12h recommended)
 :::
 
 # Technical Appendix

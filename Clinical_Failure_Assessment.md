@@ -40,8 +40,8 @@ Major data quality issues and insufficient sample size make reliable pooling imp
 
 | Data Source | Odds Ratio | Interpretation |
 |------------|-----------|----------------|
-| 2×2 table (extracted) | 0.27 | Short TTP → MORE persistent bacteremia |
-| Reported OR (paper) | 14.57 | Short TTP → LESS persistent bacteremia |
+| 2×2 table (extracted) | 0.27 | Short TTP → LESS persistent bacteremia (protective) |
+| Reported OR (paper) | 14.57 | Short TTP → MORE persistent bacteremia (harmful) |
 
 **These cannot both be correct!** This indicates either:
 - Data entry error in 2×2 table extraction

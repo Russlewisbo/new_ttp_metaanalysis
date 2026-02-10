@@ -6,9 +6,9 @@
 ## 📊 Key Findings
 
 ### Primary Result
-**Longer TTP is strongly associated with increased mortality**
-- **Pooled OR: 2.43** (95% CrI: 1.38-4.20)
-- **99.8% probability** that longer TTP increases mortality
+**Shorter TTP is strongly associated with increased mortality**
+- **Pooled OR: 2.43** (95% CrI: 1.38-4.20) — short vs long TTP
+- **99.8% probability** that shorter TTP increases mortality
 - Effect is **robust** across multiple sensitivity analyses
 
 ### Critical Discovery
