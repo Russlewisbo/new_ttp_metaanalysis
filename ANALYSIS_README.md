@@ -73,8 +73,8 @@
 ## 💊 Clinical Implications
 
 ### For Clinicians
-1. **TTP is a valid prognostic marker** - Use for risk stratification
-2. **Earlier cutpoints are more informative** - Consider 10-12h thresholds
+1. **TTP is a valid prognostic marker** - Short TTP identifies high-risk patients
+2. **Lower cutpoints are more informative** - Consider 10-12h thresholds (short TTP <10-12h = higher risk)
 3. **Universal applicability** - Use regardless of gram stain
 4. **Implementation ready** - Modern systems provide real-time TTP
 
