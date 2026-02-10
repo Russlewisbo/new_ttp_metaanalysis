@@ -710,9 +710,7 @@ sessionInfo()
 
 Data are available in `TTP_MetaAnalysis_Final.xlsx`. Analysis code can be provided upon request.
 
-## Acknowledgments
 
-This analysis was conducted using automated methods under human supervision. All models and results should be independently verified before publication or clinical application.
 
 ---
 
