@@ -8,6 +8,25 @@
 
 ---
 
+## 0. Search-date evidence found in the project (read before filling Section 1)
+
+Exact search execution dates are **not recorded anywhere in the project files**, so none of the `[FILL]` cells below could be completed without inventing them. The dates that *can* be supported are listed here. File dates are when a file was created or copied, not when a search was run, so treat them as upper bounds to be replaced with the dates from your database search histories or exported files.
+
+| Evidence | Date | What it supports |
+|---|---|---|
+| `Elicit_vs_PubMed_triage_report.md` header | 2026-05-12 | Redesigned PubMed strategy compared with the Elicit corpus (V1: 571 records; V3, after fixes: 1,245 records), so PubMed V1/V3 had been run by this date |
+| `Elicit - ... Sources (1).ris` (384 records), `TTP_Revised- Sources.ris` | files dated 2026-05-12 to 2026-05-20 | Original Elicit corpus (thesis baseline), run date unknown |
+| `Triage_NewSearch_2026-05-22*` | 2026-05-22 | Update search triaged (445-row Elicit export; PubMed record used for triage). Run date inferred as on or before 2026-05-22 |
+| `review_22.05.05csv.csv` (4,605 rows) | file dated 2026-05-22 | Covidence export. Provenance of the 4,605 records (which databases, what dates) is **not documented** |
+| `Tier3_PubMed_sample_summary.md` | 2026-05-23 | PubMed enrichment of candidate records |
+| `TTP_Update_Screening_Pool.*` | 2026-05-25 | 355-record screening pool |
+
+**Search scope (confirmed by the author, 2026-10-30):** the five-database search (PubMed, Embase, Scopus, Cochrane CENTRAL, Web of Science) was executed, and its records are the 4,605 in the Covidence export. CINAHL was **not** searched. Trial registers and preprint servers were **not** searched. No reference-list searching or forward/backward citation tracking was performed. These are deviations from the PROSPERO protocol, which listed CINAHL, trial registers, preprint servers and citation tracking, and they should be reported as such.
+
+Still needed from the author: per-database run dates and record counts (original and update), PubMed run dates, and the role of Elicit. Project files show that the 355-record screening pool was built from an Elicit export plus PubMed enrichment, and that Alvarez 2012 and Peri 2026 are recorded as "handsearch/snowball" in RESUME.md. Both conflict with "no reference-list searching" and need to be reconciled in the Methods and PRISMA flow.
+
+---
+
 ## 1. Information sources
 
 ### 1.1 Bibliographic databases
@@ -19,7 +38,7 @@
 | 3 | Cochrane CENTRAL | Wiley Cochrane Library | `[FILL: YYYY-MM-DD]` | `[FILL: YYYY-MM-DD]` |
 | 4 | Web of Science Core Collection | Clarivate | `[FILL: YYYY-MM-DD]` | `[FILL: YYYY-MM-DD]` |
 | 5 | Scopus | Elsevier *(added vs thesis)* | n/a | `[FILL: YYYY-MM-DD]` |
-| 6 | CINAHL Complete | EBSCOhost | `[FILL: YYYY-MM-DD or 'NOT EXECUTED']` | `[FILL: YYYY-MM-DD or 'NOT EXECUTED']` |
+| 6 | CINAHL Complete | EBSCOhost | NOT EXECUTED | NOT EXECUTED |
 
 > **Note:** The PROSPERO protocol lists 6 databases. The user-reported total of 4,605 records spans 5 (PubMed, Embase, Scopus, Cochrane, WOS). **Clarify CINAHL's disposition** — either rolled into one of the other counts, dropped at execution, or run separately. This affects the PRISMA figure top-row count.
 
@@ -27,23 +46,23 @@
 
 | # | Register | URL | Searched? | Execution date |
 |---:|---|---|---|---|
-| 1 | ClinicalTrials.gov | clinicaltrials.gov | `[FILL: YES / NO]` | `[FILL: YYYY-MM-DD]` |
-| 2 | WHO ICTRP | trialsearch.who.int | `[FILL: YES / NO]` | `[FILL: YYYY-MM-DD]` |
+| 1 | ClinicalTrials.gov | clinicaltrials.gov | NO | n/a |
+| 2 | WHO ICTRP | trialsearch.who.int | NO | n/a |
 
 ### 1.3 Preprint servers
 
 | # | Server | URL | Searched? | Execution date |
 |---:|---|---|---|---|
-| 1 | medRxiv | medrxiv.org | `[FILL: YES / NO]` | `[FILL: YYYY-MM-DD]` |
-| 2 | bioRxiv | biorxiv.org | `[FILL: YES / NO]` | `[FILL: YYYY-MM-DD]` |
+| 1 | medRxiv | medrxiv.org | NO | n/a |
+| 2 | bioRxiv | biorxiv.org | NO | n/a |
 
 ### 1.4 Other methods
 
 | Method | Source paper(s) | Date executed | Records contributed |
 |---|---|---|---|
-| Forward citation tracking | Hsieh et al. 2022 (*BMC Infect Dis*) | `[FILL: YYYY-MM-DD]` | `[FILL: N records]` |
-| Forward citation tracking | IJMPR 2026 systematic review | `[FILL: YYYY-MM-DD]` | `[FILL: N records]` |
-| Reference-list hand-searching | Reference lists of all included studies + recent narrative reviews | `[FILL: YYYY-MM-DD]` | **2** *(Álvarez 2012, Peri 2026 — confirmed in RESUME.md; revise if additional handsearched records exist)* |
+| Forward citation tracking | Hsieh et al. 2022 (*BMC Infect Dis*) | NOT PERFORMED | 0 |
+| Forward citation tracking | IJMPR 2026 systematic review | NOT PERFORMED | 0 |
+| Reference-list hand-searching | Reference lists of included studies | NOT PERFORMED *(RESUME.md records Álvarez 2012 and Peri 2026 as handsearch/snowball; reconcile)* | 0 |
 | Expert contact / direct correspondence | First/senior authors of key studies | `[FILL: YYYY-MM-DD]` | `[FILL: N records]` |
 
 ---
@@ -162,12 +181,12 @@ Strategy version: V3 *(post-defect-fix per `Elicit_vs_PubMed_triage_report.md`)*
 | Cochrane CENTRAL | `[FILL: N]` | `[FILL: date]` |
 | Web of Science | `[FILL: N]` | `[FILL: date]` |
 | Scopus | `[FILL: N]` | `[FILL: date]` |
-| CINAHL | `[FILL: N or 'not executed']` | `[FILL: date]` |
+| CINAHL | not executed | n/a |
 | **Subtotal from databases** | **`[FILL: sum] = 4,605`** *(per user)* | — |
-| Hand-search of reference lists | **2** *(Álvarez 2012, Peri 2026)* | `[FILL: date]` |
-| Forward citation tracking (Hsieh 2022, IJMPR 2026) | `[FILL: N]` | `[FILL: date]` |
-| Trial registers (CT.gov, ICTRP) | `[FILL: N or 'planned, not run']` | `[FILL: date]` |
-| Preprint servers (medRxiv, bioRxiv) | `[FILL: N or 'planned, not run']` | `[FILL: date]` |
+| Hand-search of reference lists | not performed *(reconcile with Álvarez 2012, Peri 2026)* | n/a |
+| Forward citation tracking | not performed | n/a |
+| Trial registers (CT.gov, ICTRP) | not searched | n/a |
+| Preprint servers (medRxiv, bioRxiv) | not searched | n/a |
 | Expert correspondence | `[FILL: N or '0']` | `[FILL: date]` |
 | **Subtotal from other methods** | **`[FILL: sum]`** | — |
 | **Grand total identified** | **`[FILL: sum]`** | — |
