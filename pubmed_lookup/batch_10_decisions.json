@@ -1,0 +1,46 @@
+{
+  "36928259": {
+    "ttp_signal": true,
+    "note": "BC pre-analytical quality (Basel); TTP modeled as outcome of BC volume/staffing"
+  },
+  "36809027": {
+    "ttp_signal": false,
+    "note": "EUCAST RAST 4h AST from positive BC, not measuring BC TTP"
+  },
+  "36715537": {
+    "ttp_signal": true,
+    "note": "Candida recovery simulation with antifungals; max TTD 4.6d across bottle types"
+  },
+  "36789234": {
+    "ttp_signal": true,
+    "note": "Satellite vs lab BC; time-to-positivity 24.83h vs 27.83h (incl transport)"
+  },
+  "36310789": {
+    "ttp_signal": false,
+    "note": "COVID-19 BSI prevalence/risk factors, no TTP"
+  },
+  "36091350": {
+    "ttp_signal": false,
+    "note": "Nigeria rural BSI bacteriology surveillance, no TTP"
+  },
+  "35899276": {
+    "ttp_signal": false,
+    "note": "Dalbavancin sequential vs SoC for SAB; duration of bacteremia (days), not BC TTP"
+  },
+  "35799715": {
+    "ttp_signal": false,
+    "note": "Pediatric cardiac BC trends Pakistan, positivity rate only"
+  },
+  "35693849": {
+    "ttp_signal": false,
+    "note": "CRGNB BSI hematologic malignancies risk factors, no TTP"
+  },
+  "35630294": {
+    "ttp_signal": false,
+    "note": "MSSA combo therapy meta-analysis; duration of bacteremia, not BC TTP"
+  },
+  "35450105": {
+    "ttp_signal": false,
+    "note": "Neonatal sepsis Tanzania predictors of mortality, no TTP"
+  }
+}

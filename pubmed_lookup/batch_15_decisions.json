@@ -1,0 +1,42 @@
+{
+  "31139670": {
+    "ttp_signal": false,
+    "note": "Hourly effect of pre-BC IV abx on BC positivity rate in ED, not TTP"
+  },
+  "31123543": {
+    "ttp_signal": false,
+    "note": "CO-SAB epidemiology; bacteremia duration mentioned (days), not BC TTP"
+  },
+  "31011854": {
+    "ttp_signal": false,
+    "note": "Complicated SSSI; BC positivity rate factors, not TTP"
+  },
+  "30858203": {
+    "ttp_signal": false,
+    "note": "DAP+CPT vs SoC MRSA pilot RCT; designed for bacteremia duration but halted for mortality difference, no BC TTP"
+  },
+  "30837964": {
+    "ttp_signal": true,
+    "note": "VIRTUO vs BTA3D vs BACTEC simulated TTD; VIRTUO median 11.6/10.1h aerobic/anaerobic vs ~13h others, 330 isolates"
+  },
+  "30623615": {
+    "ttp_signal": false,
+    "note": "MIS-CLASSIFIED: this PMID is about glycated Hb (HbA1c) HLC-723 G11 analyzer, not blood culture"
+  },
+  "30568369": {
+    "ttp_signal": false,
+    "note": "NLCR for predicting bacteremia in ED, no TTP"
+  },
+  "30559815": {
+    "ttp_signal": false,
+    "note": "ICU infection markers (NLCR, neopterin, pro-ADM, PCT) as bacteremia predictors, no TTP"
+  },
+  "30558635": {
+    "ttp_signal": false,
+    "note": "Letter; PCT/CRP/IL-6 diagnostic accuracy for BC positivity (yes/no), not TTP"
+  },
+  "30555848": {
+    "ttp_signal": false,
+    "note": "Decision analysis echo in low-risk SAB; brief bacteremia duration as eligibility criterion, not BC TTP"
+  }
+}

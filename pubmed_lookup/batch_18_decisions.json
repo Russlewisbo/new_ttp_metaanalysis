@@ -1,0 +1,42 @@
+{
+  "27215201": {
+    "ttp_signal": false,
+    "note": "MSSA bacteremia β-lactam vs vancomycin; secondary outcome 'duration of bacteremia' (days), not BC TTP."
+  },
+  "27191005": {
+    "ttp_signal": false,
+    "note": "Peripheral IV as source of SAB; mentions 'longer bacteremia duration', not TTP."
+  },
+  "27112143": {
+    "ttp_signal": false,
+    "note": "β-lactam vs vancomycin in MSSA; reports duration of bacteremia (97.1 vs 70.7 h) — clearance time, not BC TTP."
+  },
+  "26956367": {
+    "ttp_signal": true,
+    "note": "EUROBACT sub-analysis: explicit comparison of time to BC positivity, fungemia 48.7 h vs bacteremia 38.1 h (p=0.0004)."
+  },
+  "26646549": {
+    "ttp_signal": false,
+    "note": "Vancomycin MIC creep/trough in pediatric SAB; reports duration of bacteremia, not TTP."
+  },
+  "26656373": {
+    "ttp_signal": false,
+    "note": "Shapiro score + PCT to predict BC positivity; no TTP measurement."
+  },
+  "26587217": {
+    "ttp_signal": false,
+    "note": "BC bottle vs standard culture bottle for parapneumonic effusion: positivity rate only, no TTP."
+  },
+  "26554930": {
+    "ttp_signal": true,
+    "note": "Four anaerobic BC bottles compared: explicit TTD comparison (BACTEC Lytic 18 h vs others, p<0.0001)."
+  },
+  "26436013": {
+    "ttp_signal": false,
+    "note": "Predictors of BC positivity in severe pediatric pneumonia (WBC, CRP, temp); no TTP."
+  },
+  "26311144": {
+    "ttp_signal": false,
+    "note": "Blood mass/volume correlation with BC positivity; no TTP measurement."
+  }
+}

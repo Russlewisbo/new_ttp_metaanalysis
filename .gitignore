@@ -2,3 +2,7 @@
 .Rhistory
 .RData
 .Ruserdata
+.positai
+
+# Full-text PDFs (copyrighted, very large; kept locally only)
+new_ttp_pdfs/

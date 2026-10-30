@@ -1,0 +1,42 @@
+{
+  "21898120": {
+    "ttp_signal": false,
+    "note": "Aminoglycoside synergy in persistent SAB/endocarditis; inclusion was >72h SAB; outcomes are recurrence/mortality, not TTP."
+  },
+  "21715585": {
+    "ttp_signal": true,
+    "note": "Danish fungemia cohort: notes C. glabrata / arterial-line cultures needed longer incubation — TTP-related comparison flagged for reviewer."
+  },
+  "21653761": {
+    "ttp_signal": true,
+    "note": "BacT/Alert MB vs Myco/F Lytic vs Isolator for MTB bacteremia: mean times to detection 16.4 vs 20.0 vs 23.8 days; TTP correlated with bacterial load."
+  },
+  "21490189": {
+    "ttp_signal": true,
+    "note": "Early Lyme BC yield: 90% positivity detected within 7 days of incubation — time-to-positivity dynamics reported."
+  },
+  "21307220": {
+    "ttp_signal": true,
+    "note": "BD Bactec Plus vs VersaTREK Redox media with antibiotics: explicit TTD comparison; Bactec faster overall."
+  },
+  "21270228": {
+    "ttp_signal": true,
+    "note": "Bactec Plus Aerobic/F vs VersaTREK Redox 1 for Candida + antifungals: median LTD (length of time to detection) compared (10.8 h difference with antifungals)."
+  },
+  "21173172": {
+    "ttp_signal": false,
+    "note": "agr dysfunction & SAB mortality; uses 'longer duration of bacteremia' as background, not TTP measurement."
+  },
+  "21092087": {
+    "ttp_signal": false,
+    "note": "Rifampin for persistent CoNS bacteremia in neonates: uses duration of bacteremia (days), not BC TTP."
+  },
+  "21083886": {
+    "ttp_signal": true,
+    "note": "PCT and bacteremia in urosepsis: TTP of E. coli BCs linearly correlated with log PCT (R²=0.278, P=0.007) — explicit TTP outcome."
+  },
+  "20237093": {
+    "ttp_signal": false,
+    "note": "Direct MALDI-TOF ID from positive BC bottles; post-positivity ID (~100 min), not TTP."
+  }
+}

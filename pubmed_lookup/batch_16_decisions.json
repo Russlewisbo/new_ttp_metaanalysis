@@ -1,0 +1,42 @@
+{
+  "30210487": {
+    "ttp_signal": true,
+    "note": "VersaTrek 528 vs BACTEC FX 400 (China); TTD comparable across systems, positive rates similar"
+  },
+  "30135230": {
+    "ttp_signal": true,
+    "note": "US 13-hospital BC TAT study; TTD/Gram stain/ID/AST times analyzed across 165k specimens"
+  },
+  "29898999": {
+    "ttp_signal": true,
+    "note": "BacT/Alert FA vs T2Candida; TTD ~5h vs 27-30h for Candida; fluconazole increased BC TTD by 14.8-67h"
+  },
+  "29843781": {
+    "ttp_signal": false,
+    "note": "DASH-RCT protocol DAP+BL vs placebo MSSA; primary outcome bacteremia duration (days), not BC TTP"
+  },
+  "29401558": {
+    "ttp_signal": false,
+    "note": "Same-day ID/AST from positive BC broths via short-term incubation, not BC TTP"
+  },
+  "29397962": {
+    "ttp_signal": false,
+    "note": "Pediatric CLABSI clearance; time to recurrent positive BC after tCVC removal (days), not BC TTP"
+  },
+  "29378704": {
+    "ttp_signal": false,
+    "note": "Vanc MIC MRSA bacteremia; secondary outcome bacteremia duration ≥7d, not BC TTP"
+  },
+  "29360429": {
+    "ttp_signal": true,
+    "note": "Corynebacterium bacteremia vs contamination; shorter TTP (p=0.006) distinguishes true bacteremia"
+  },
+  "30906173": {
+    "ttp_signal": false,
+    "note": "Arcanobacterium CNS abscess + bacteremia case report, no TTP"
+  },
+  "29207967": {
+    "ttp_signal": false,
+    "note": "MALDI-TOF ID + AST from positive BC; reduces TAT to ID/AST (61h vs 83h), not BC TTP"
+  }
+}

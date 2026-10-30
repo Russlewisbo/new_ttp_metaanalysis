@@ -1,0 +1,42 @@
+{
+  "15834090": {
+    "ttp_signal": false,
+    "note": "BC bottles for corneal organ culture sterility (fungi); TTD reported but topic is eye-bank sterility testing, not BSI TTP."
+  },
+  "15635007": {
+    "ttp_signal": true,
+    "note": "Effect of Candida inoculum size on BACTEC 9240: time to growth detection shorter with larger inocula — TTD measured."
+  },
+  "15472312": {
+    "ttp_signal": true,
+    "note": "BacT/ALERT FN vs SN anaerobic media: mean TTD 16.8 vs 18.2 h overall; B. fragilis 28 vs 60 h."
+  },
+  "15131190": {
+    "ttp_signal": true,
+    "note": "BACTEC MYCO/F LYTIC vs Peds Plus/F and Plus Aerobic/F for B. melitensis: TTD 101.4 vs 65.5 h (P=0.004)."
+  },
+  "14532209": {
+    "ttp_signal": true,
+    "note": "Simulated candidemia in BACTEC 9240 Plus Aerobic/Anaerobic: mean TTD ~24 h overall, C. glabrata aerobic 120.9 h vs anaerobic 22.1 h (P<0.001)."
+  },
+  "12734238": {
+    "ttp_signal": true,
+    "note": "BACTEC 13A, MYCO/F LYTIC, BacT/ALERT MB, ISOLATOR 10 for mycobacteremia: mean times to detection differ significantly across systems."
+  },
+  "12202586": {
+    "ttp_signal": true,
+    "note": "Lysis filtration vs BACTEC for odontogenic pediatric bacteremia: TTD shorter for BACTEC (aerobic 9.6 vs 43.7 h; anaerobic 9.9 vs 45.1 h)."
+  },
+  "11474007": {
+    "ttp_signal": true,
+    "note": "BacT/Alert PF vs Pedi-BacT pediatric bottles: TTD compared; yeast significantly faster in PF (22.9 h), staphylococci in Pedi-BacT (22.5 h)."
+  },
+  "11136783": {
+    "ttp_signal": true,
+    "note": "Classic DTP paper: earlier positivity of central venous vs peripheral BCs for CRBSI in cancer patients; cutoff ≥+3 h gave 100% specificity, 81% sensitivity."
+  },
+  "10655337": {
+    "ttp_signal": false,
+    "note": "PCR-SSCP for rapid bacterial ID from positive BCs; reports time to ID after BC positivity (1-8 d biochem vs 7 h PCR), not BC TTP."
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "40638464": {
+    "ttp_signal": false,
+    "note": "Rhizobium radiobacter pediatric BSI case series; growth detected days after admission, not BC TTP"
+  },
+  "40563215": {
+    "ttp_signal": true,
+    "note": "Pediatric pneumococcal SCD bacteremia; median time to culture positivity 10.6h (range 3.4-20.2)"
+  },
+  "40529959": {
+    "ttp_signal": true,
+    "note": "SAB narrative review; rapid BC positivity flagged as high-risk feature for adjunctive β-lactam combo therapy"
+  },
+  "40453451": {
+    "ttp_signal": false,
+    "note": "KPLA blood culture positivity (yes/no) risk factors, not TTP"
+  },
+  "40353660": {
+    "ttp_signal": false,
+    "note": "REL/DPA/AVI rapid carbapenemase detection; time from BC positivity (not BC TTP)"
+  },
+  "40162805": {
+    "ttp_signal": false,
+    "note": "Selux AST evaluation; tests stored positive BC up to 16h, not TTP"
+  },
+  "39998289": {
+    "ttp_signal": false,
+    "note": "MSSA stewardship/BCID PCR commentary; time to optimal therapy, not TTP"
+  },
+  "39611835": {
+    "ttp_signal": true,
+    "note": "BacT/ALERT VIRTUO vs BACTEC FX400 TTD comparison, median 14h vs 16h"
+  },
+  "39331309": {
+    "ttp_signal": false,
+    "note": "Bacillaceae pseudo-outbreak from contaminated cotton wool, not TTP"
+  },
+  "39324811": {
+    "ttp_signal": false,
+    "note": "QuickMIC rapid AST evaluation; robust to BC delay time but not measuring TTP"
+  },
+  "39289626": {
+    "ttp_signal": true,
+    "note": "C. striatum vs MRSA/MRSE BSI TTP comparisons (27h vs 20h vs 19h); mortality differs"
+  }
+}

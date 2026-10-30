@@ -1,0 +1,46 @@
+{
+  "35369711": {
+    "ttp_signal": true,
+    "note": "Commentary on Chavez 35291804; discusses TTP & bacteremia duration in context of new CMBC systems"
+  },
+  "35291804": {
+    "ttp_signal": true,
+    "note": "Virtuo vs VersaTREK in SAB; median TTP shorter post (13.3h vs 17.8h); prolonged SAB more common post"
+  },
+  "35054007": {
+    "ttp_signal": false,
+    "note": "Febrile neutropenia post-ASCT; CRP/fever predict BC positivity (yes/no), not TTP"
+  },
+  "36168462": {
+    "ttp_signal": false,
+    "note": "Community-onset BSI South Africa epidemiology, no TTP"
+  },
+  "35602233": {
+    "ttp_signal": false,
+    "note": "IDU-BSI S. aureus genomic epi; longer bacteremia duration (days), not BC TTP"
+  },
+  "35238358": {
+    "ttp_signal": false,
+    "note": "Enteric fever children; predictors of BC positivity, not TTP"
+  },
+  "34945119": {
+    "ttp_signal": true,
+    "note": "IE prolonged BC incubation study; TTP >120h threshold used to assess 5d incubation cutoff"
+  },
+  "34408935": {
+    "ttp_signal": true,
+    "note": "Dysgonomonas case report; reports no differential TTP between peripheral and port BC"
+  },
+  "34258313": {
+    "ttp_signal": false,
+    "note": "STAPH pathway MRSA BSI; bacteremia duration (days), not BC TTP"
+  },
+  "34174435": {
+    "ttp_signal": false,
+    "note": "HIV pediatric BSI Mozambique surveillance, no TTP"
+  },
+  "34074985": {
+    "ttp_signal": false,
+    "note": "Hypoglycemia predicts BC positivity in cirrhosis, not TTP"
+  }
+}

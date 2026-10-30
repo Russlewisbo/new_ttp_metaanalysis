@@ -1,0 +1,42 @@
+{
+  "34045801": {
+    "ttp_signal": false,
+    "note": "COVID-19 BSI prevalence/etiology Jaipur, no TTP"
+  },
+  "33579205": {
+    "ttp_signal": true,
+    "note": "BC pre-incubation storage delays multi-centre; longer storage increases TTD"
+  },
+  "33500637": {
+    "ttp_signal": true,
+    "note": "BacT/ALERT FAN+ vs BACTEC inactivation; FA Plus TTD 14.7h vs BACTEC aerobic 19.55h"
+  },
+  "33487864": {
+    "ttp_signal": true,
+    "note": "CRBSI prevalence; uses differential TTP for diagnosis confirmation"
+  },
+  "33258440": {
+    "ttp_signal": true,
+    "note": "Nonautomated BC blind subculture timing (Cambodia); earlier subculture shortens TTD for B. pseudomallei"
+  },
+  "33239377": {
+    "ttp_signal": true,
+    "note": "Virtuo BacT/Alert optimal incubation; TTP per organism, 99% positive by 91.5h aerobic/108h anaerobic"
+  },
+  "33196562": {
+    "ttp_signal": false,
+    "note": "Pediatric SAB; RVS → longer bacteremia duration (days), not BC TTP"
+  },
+  "33034779": {
+    "ttp_signal": true,
+    "note": "BACT/ALERT VIRTUO delayed-entry impact; baseline TTD 9.6h, +24-36h pre-incubation delay tested"
+  },
+  "32860099": {
+    "ttp_signal": false,
+    "note": "VLBW colonization-to-BC pathogen match; interval days from swab, not BC TTP"
+  },
+  "33121610": {
+    "ttp_signal": true,
+    "note": "Review of modern BC methods; explicitly discusses preanalytic/analytical factors reducing TTP"
+  }
+}

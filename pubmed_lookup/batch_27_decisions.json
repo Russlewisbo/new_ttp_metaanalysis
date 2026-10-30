@@ -1,0 +1,42 @@
+{
+  "3366871": {
+    "ttp_signal": true,
+    "note": "Isolator lysis-centrifugation vs BACTEC 13A for MAC in AIDS: avg TTD 16 vs 14 days (no significant difference)."
+  },
+  "3366869": {
+    "ttp_signal": true,
+    "note": "BACTEC 6B vs 6B+gelatin+V-factor analog: H. influenzae mean TTD 8.5 vs 15.9 h (P<0.01); C. albicans 34.9 vs 71.6 h."
+  },
+  "3069859": {
+    "ttp_signal": true,
+    "note": "BACTEC NR-660 vs first-day subculturing: 97% positives detected with equal/greater rapidity by NR-660 — TTD comparison."
+  },
+  "3571479": {
+    "ttp_signal": true,
+    "note": "BC methods for L. pneumophila in guinea pig blood: biphasic 5 d vs other methods 2-3 d for positivity (P<10⁻⁵) — TTD compared."
+  },
+  "3546365": {
+    "ttp_signal": true,
+    "note": "Septi-Chek vs BACTEC with agitation/subculturing: median TTD 15.8 (BACTEC) vs 18.6 h (RSC-TSB) for common isolates."
+  },
+  "6376537": {
+    "ttp_signal": true,
+    "note": "Isolator 1.5 vs BACTEC radiometric for pediatric bacteremia: mean TTD 4.1 h faster with Isolator 1.5; time to colonies 26.6 h faster."
+  },
+  "6826708": {
+    "ttp_signal": true,
+    "note": "BACTEC 6B vs 16B (resin) for patients on antimicrobials: 16B significantly shortened TTP; 13/49 dual-positives detected 1-5 d earlier in 16B."
+  },
+  "6761357": {
+    "ttp_signal": false,
+    "note": "Latex agglutination for direct S. aureus ID from BC fluid; positive before formal BC positivity, but no TTP measurement of BCs."
+  },
+  "6752196": {
+    "ttp_signal": true,
+    "note": "BACTEC bedside vs Vacutainer transfer inoculation: time to positivity similar between methods — TTP compared."
+  },
+  "328398": {
+    "ttp_signal": false,
+    "note": "Neonatal rat E. coli colonization vs H. influenzae b challenge; uses 'duration of bacteremia' in animal model, no BC TTP."
+  }
+}

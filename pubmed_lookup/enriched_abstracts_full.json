@@ -1,0 +1,1198 @@
+{
+  "31340990": {
+    "ttp_signal": true,
+    "note": "TTD BacT/Alert vs Bactec antibiotic resin bottles"
+  },
+  "42041298": {
+    "ttp_signal": true,
+    "note": "TTD/TTPR/TTAST KPIs blood culture diagnostics"
+  },
+  "36068835": {
+    "ttp_signal": false,
+    "note": "Ethiopian AMR cross-section"
+  },
+  "39962179": {
+    "ttp_signal": false,
+    "note": "Ethiopian AMR Northwest"
+  },
+  "25760564": {
+    "ttp_signal": false,
+    "note": "CoNS infants vancomycin, duration of bacteremia not TTP"
+  },
+  "28686744": {
+    "ttp_signal": false,
+    "note": "XDRAB single vs multiple positive BC"
+  },
+  "38905222": {
+    "ttp_signal": true,
+    "note": "Persistent SAB children: shorter TTP 16h vs 20h"
+  },
+  "38456690": {
+    "ttp_signal": false,
+    "note": "T2R panel, T2R time-to-positive not BC TTP"
+  },
+  "38073558": {
+    "ttp_signal": false,
+    "note": "Surgical ICU BC stewardship"
+  },
+  "40431219": {
+    "ttp_signal": false,
+    "note": "Rapid AST methods, turnaround time"
+  },
+  "35877074": {
+    "ttp_signal": false,
+    "note": "ED CDS for BC collection"
+  },
+  "28539343": {
+    "ttp_signal": true,
+    "note": "BacT/Alert Virtuo vs BTA3D, shorter TTD"
+  },
+  "15096566": {
+    "ttp_signal": true,
+    "note": "PCR Candida BC, time to positivity"
+  },
+  "17267634": {
+    "ttp_signal": true,
+    "note": "BacT/ALERT yields and times to detection"
+  },
+  "32235247": {
+    "ttp_signal": false,
+    "note": "Eagle effect ampicillin, duration of bacteremia"
+  },
+  "33064220": {
+    "ttp_signal": false,
+    "note": "Candidemia ICU mortality predictors"
+  },
+  "41235945": {
+    "ttp_signal": false,
+    "note": "VITEK REVEAL AST time to result"
+  },
+  "6350353": {
+    "ttp_signal": true,
+    "note": "1983 ARD, length of time to detection of positive BC"
+  },
+  "24885168": {
+    "ttp_signal": true,
+    "note": "BACTEC PJI, shorter time to positivity"
+  },
+  "2671018": {
+    "ttp_signal": true,
+    "note": "1989 LC marrow transplant, time to detection comparisons"
+  },
+  "41079960": {
+    "ttp_signal": true,
+    "note": "Title: time taken for BC positivity in Candida endocarditis"
+  },
+  "39609092": {
+    "ttp_signal": false,
+    "note": "Persistent MRSA bacteremia mortality"
+  },
+  "38576380": {
+    "ttp_signal": false,
+    "note": "Low-risk SAB diagnostic imaging"
+  },
+  "39910483": {
+    "ttp_signal": false,
+    "note": "BSI Gambia tertiary hospital AMR"
+  },
+  "35905221": {
+    "ttp_signal": false,
+    "note": "Factors associated with BC positivity rate (not time)"
+  },
+  "39436138": {
+    "ttp_signal": false,
+    "note": "BCID PCR MSSA, time to therapy not BC TTP"
+  },
+  "37823667": {
+    "ttp_signal": false,
+    "note": "BDG/mannan biomarker kinetics candidemia"
+  },
+  "41732749": {
+    "ttp_signal": false,
+    "note": "Blood Culture Train collection quality"
+  },
+  "40781612": {
+    "ttp_signal": false,
+    "note": "BSI Nepal AMR 10y trends"
+  },
+  "38567366": {
+    "ttp_signal": true,
+    "note": "TTP audit 36h reassessment, median 12.75h vs 24.08h"
+  },
+  "41358753": {
+    "ttp_signal": false,
+    "note": "Cancer center BC stewardship shortage"
+  },
+  "38125909": {
+    "ttp_signal": true,
+    "note": "DTTP for C-RBSI biofilm dynamics microscopy"
+  },
+  "40791622": {
+    "ttp_signal": false,
+    "note": "COVID pandemic BSI distribution"
+  },
+  "40819314": {
+    "ttp_signal": true,
+    "note": "Veterinary Sepsityper, mean TTP 21h25min"
+  },
+  "41682906": {
+    "ttp_signal": false,
+    "note": "SeptiCyte RAPID predicts BC positivity (rate)"
+  },
+  "39229552": {
+    "ttp_signal": false,
+    "note": "PD postop BC positivity rate"
+  },
+  "35758670": {
+    "ttp_signal": true,
+    "note": "BD Bactec >96h, keyword: time to positivity"
+  },
+  "40933218": {
+    "ttp_signal": false,
+    "note": "BC-positive sepsis mortality"
+  },
+  "37761778": {
+    "ttp_signal": false,
+    "note": "COVID BC organisms"
+  },
+  "36009973": {
+    "ttp_signal": false,
+    "note": "Ceftaroline+vanc MRSA meta-analysis"
+  },
+  "39162537": {
+    "ttp_signal": true,
+    "note": "STAPH score uses TTP for SA ID"
+  },
+  "35695564": {
+    "ttp_signal": true,
+    "note": "T2MR vs BC: time to positive test 4.5h vs 52.5h"
+  },
+  "36192715": {
+    "ttp_signal": true,
+    "note": "TTP <=13h independent predictor septic shock Klebsiella"
+  },
+  "40002619": {
+    "ttp_signal": true,
+    "note": "HubCentra84 CMBCS, TTP across organisms"
+  },
+  "41571883": {
+    "ttp_signal": true,
+    "note": "BactInsight turbidimeter decreased TTP"
+  },
+  "41809933": {
+    "ttp_signal": false,
+    "note": "Brucella biovar 3 BC positivity rate"
+  },
+  "39596798": {
+    "ttp_signal": false,
+    "note": "NG-Test CARBA 5 carbapenemase detection"
+  },
+  "41408189": {
+    "ttp_signal": true,
+    "note": "CRBSI risk factors include DTP per IDSA"
+  },
+  "41132485": {
+    "ttp_signal": true,
+    "note": "BC bottle antibiotic adsorption, TTD comparison"
+  },
+  "41311915": {
+    "ttp_signal": true,
+    "note": "Length of BC positivity outcome PABSI cholecystectomy"
+  },
+  "41051777": {
+    "ttp_signal": false,
+    "note": "Pediatric BC stewardship positivity rate"
+  },
+  "36766628": {
+    "ttp_signal": true,
+    "note": "InTray cassettes, TTD <=20h in most BC"
+  },
+  "42041349": {
+    "ttp_signal": false,
+    "note": "MALDI-TOF MS antibiotic appropriateness ED"
+  },
+  "41196883": {
+    "ttp_signal": false,
+    "note": "BC positivity ICU IE mortality ML"
+  },
+  "36314799": {
+    "ttp_signal": false,
+    "note": "WGS PBC nucleic acid extraction"
+  },
+  "41757894": {
+    "ttp_signal": true,
+    "note": "BC bottle shortage Microxpress, longer TTD"
+  },
+  "36094318": {
+    "ttp_signal": true,
+    "note": "Virtuo vs Bactec FX TTD crossover trial median 15.2 vs 16.3h"
+  },
+  "42032851": {
+    "ttp_signal": false,
+    "note": "Mycoplasma BC audit obstetric"
+  },
+  "37296699": {
+    "ttp_signal": false,
+    "note": "FAST Liquid Colony ID/AST workflow"
+  },
+  "35852363": {
+    "ttp_signal": false,
+    "note": "Pediatric Accelerate Pheno AST"
+  },
+  "40092648": {
+    "ttp_signal": false,
+    "note": "Vitreoretinal fungemia screening"
+  },
+  "41676237": {
+    "ttp_signal": true,
+    "note": "DL/MH BC instruments evaluation TTP across bacteria"
+  },
+  "39885965": {
+    "ttp_signal": false,
+    "note": "Elderly bacteremia routine markers"
+  },
+  "36750777": {
+    "ttp_signal": false,
+    "note": "Platelet dynamics SAB outcomes"
+  },
+  "41013411": {
+    "ttp_signal": false,
+    "note": "Sepsis CQUIN BC positivity epidemiology"
+  },
+  "38982359": {
+    "ttp_signal": false,
+    "note": "Weight-based pediatric BC algorithm recovery"
+  },
+  "35843933": {
+    "ttp_signal": true,
+    "note": "Pooled vs individual BC for CRBSI, DTP TTP comparison"
+  },
+  "37249984": {
+    "ttp_signal": true,
+    "note": "mcfDNA-seq BSI prediction of BC positivity"
+  },
+  "37205138": {
+    "ttp_signal": true,
+    "note": "NICU BC practices, differential TTP mentioned"
+  },
+  "39478987": {
+    "ttp_signal": false,
+    "note": "Immunocompromised BSI duration not TTP"
+  },
+  "40499967": {
+    "ttp_signal": false,
+    "note": "ONFIRE FilmArray protocol"
+  },
+  "36890192": {
+    "ttp_signal": true,
+    "note": "CRBSI ED, DTP >2h criterion"
+  },
+  "39220915": {
+    "ttp_signal": false,
+    "note": "Anaerobic bottle addition, no TTP enhancement"
+  },
+  "41446408": {
+    "ttp_signal": false,
+    "note": "ASP rapid BC diagnostics OAT"
+  },
+  "38921744": {
+    "ttp_signal": true,
+    "note": "E. coli C-RBSI DTTP technique"
+  },
+  "37549903": {
+    "ttp_signal": false,
+    "note": "Enteric fever BC positivity review"
+  },
+  "39813030": {
+    "ttp_signal": false,
+    "note": "BC use benchmarks ICU/ward"
+  },
+  "39430715": {
+    "ttp_signal": false,
+    "note": "Multidisciplinary BC efficiency"
+  },
+  "37238183": {
+    "ttp_signal": true,
+    "note": "Mycosis vs Aerobic BD BACTEC TTD for fungi"
+  },
+  "40948825": {
+    "ttp_signal": false,
+    "note": "BL adjunctive vs mono MRSA meta-analysis"
+  },
+  "41020577": {
+    "ttp_signal": false,
+    "note": "BC stewardship SOT recipients"
+  },
+  "40072045": {
+    "ttp_signal": true,
+    "note": "SLIC technology rapid BSI, keyword TTP"
+  },
+  "39757158": {
+    "ttp_signal": true,
+    "note": "ddPCR E. coli BSI, DNA load inversely correlated with TTP"
+  },
+  "39005699": {
+    "ttp_signal": false,
+    "note": "MALDI-TOF MS short incubation BC identification"
+  },
+  "42072782": {
+    "ttp_signal": false,
+    "note": "Review of rapid molecular diagnostics for BSI in CKD, no TTP measurement"
+  },
+  "41837624": {
+    "ttp_signal": true,
+    "note": "Manual vs automated BC time-to-positive culture compared, HR 1.32 faster automated (Laos)"
+  },
+  "41797848": {
+    "ttp_signal": false,
+    "note": "BC volume vs positivity/contamination rate, not TTP"
+  },
+  "41716267": {
+    "ttp_signal": false,
+    "note": "BC positivity rate determinants in brucellosis, not TTP"
+  },
+  "41613423": {
+    "ttp_signal": false,
+    "note": "EHR optimization during BC bottle shortage, no TTP"
+  },
+  "41568065": {
+    "ttp_signal": false,
+    "note": "Duration of bacteremia (days) as OAI risk factor in SAB, not BC TTP"
+  },
+  "41296234": {
+    "ttp_signal": true,
+    "note": "P. aeruginosa BSI median TTP aerobic 14.8h vs anaerobic 16.5h; anaerobic growth predicts mortality"
+  },
+  "41816783": {
+    "ttp_signal": false,
+    "note": "BC positivity rate determinants in pediatric CAP Tanzania, not TTP"
+  },
+  "41327010": {
+    "ttp_signal": false,
+    "note": "BSI prevalence/AMR Lagos, not TTP"
+  },
+  "41059855": {
+    "ttp_signal": true,
+    "note": "BD BACTEC Mycosis IC/F vs standard bottles TTD comparison for fungemia"
+  },
+  "40970753": {
+    "ttp_signal": false,
+    "note": "ChroMIC rapid AST direct from positive BC, not TTP itself"
+  },
+  "40638464": {
+    "ttp_signal": false,
+    "note": "Rhizobium radiobacter pediatric BSI case series; growth detected days after admission, not BC TTP"
+  },
+  "40563215": {
+    "ttp_signal": true,
+    "note": "Pediatric pneumococcal SCD bacteremia; median time to culture positivity 10.6h (range 3.4-20.2)"
+  },
+  "40529959": {
+    "ttp_signal": true,
+    "note": "SAB narrative review; rapid BC positivity flagged as high-risk feature for adjunctive β-lactam combo therapy"
+  },
+  "40453451": {
+    "ttp_signal": false,
+    "note": "KPLA blood culture positivity (yes/no) risk factors, not TTP"
+  },
+  "40353660": {
+    "ttp_signal": false,
+    "note": "REL/DPA/AVI rapid carbapenemase detection; time from BC positivity (not BC TTP)"
+  },
+  "40162805": {
+    "ttp_signal": false,
+    "note": "Selux AST evaluation; tests stored positive BC up to 16h, not TTP"
+  },
+  "39998289": {
+    "ttp_signal": false,
+    "note": "MSSA stewardship/BCID PCR commentary; time to optimal therapy, not TTP"
+  },
+  "39611835": {
+    "ttp_signal": true,
+    "note": "BacT/ALERT VIRTUO vs BACTEC FX400 TTD comparison, median 14h vs 16h"
+  },
+  "39331309": {
+    "ttp_signal": false,
+    "note": "Bacillaceae pseudo-outbreak from contaminated cotton wool, not TTP"
+  },
+  "39324811": {
+    "ttp_signal": false,
+    "note": "QuickMIC rapid AST evaluation; robust to BC delay time but not measuring TTP"
+  },
+  "39289626": {
+    "ttp_signal": true,
+    "note": "C. striatum vs MRSA/MRSE BSI TTP comparisons (27h vs 20h vs 19h); mortality differs"
+  },
+  "39189760": {
+    "ttp_signal": true,
+    "note": "BC media neutralization study (BACT/ALERT FA/FN Plus vs DL vs REDOX); TTD reported for 9 microorg-antimicrobial combos"
+  },
+  "39184333": {
+    "ttp_signal": false,
+    "note": "Case report prosthetic-valve IE from single positive BC bottle, no TTP measurement"
+  },
+  "38774119": {
+    "ttp_signal": true,
+    "note": "Ascites direct inoculation into BC bottles; time-to-positivity measured as secondary outcome (NS)"
+  },
+  "38526076": {
+    "ttp_signal": true,
+    "note": "Veterinary calves; Cox PH comparison of TTP between PP and PA BC media (NS)"
+  },
+  "38500029": {
+    "ttp_signal": true,
+    "note": "R. pickettii/Microbacterium case report; mentions TTP >48h criterion for Microbacterium contamination"
+  },
+  "38025573": {
+    "ttp_signal": true,
+    "note": "CLABSI surveillance; uses differential time to positivity (DTP) for diagnosis"
+  },
+  "37887217": {
+    "ttp_signal": false,
+    "note": "PVL-neg CA-MRSA bacteremia Japan; bacteremia duration (days), not BC TTP"
+  },
+  "37727170": {
+    "ttp_signal": false,
+    "note": "Brucella diagnostic comparison (culture vs serology), no TTP"
+  },
+  "37533929": {
+    "ttp_signal": false,
+    "note": "Post-BC-positivity early identification protocols (ePlex/multitest); time to ID, not TTP"
+  },
+  "37449245": {
+    "ttp_signal": true,
+    "note": "BSI neutropenic hematologic; bacterial time to detection differentiates GN vs GP"
+  },
+  "37108896": {
+    "ttp_signal": true,
+    "note": "Mycosis flask vs anaerobic for candidemia; TTP modeled time-to-event 2018 vs 2020"
+  },
+  "36928259": {
+    "ttp_signal": true,
+    "note": "BC pre-analytical quality (Basel); TTP modeled as outcome of BC volume/staffing"
+  },
+  "36809027": {
+    "ttp_signal": false,
+    "note": "EUCAST RAST 4h AST from positive BC, not measuring BC TTP"
+  },
+  "36715537": {
+    "ttp_signal": true,
+    "note": "Candida recovery simulation with antifungals; max TTD 4.6d across bottle types"
+  },
+  "36789234": {
+    "ttp_signal": true,
+    "note": "Satellite vs lab BC; time-to-positivity 24.83h vs 27.83h (incl transport)"
+  },
+  "36310789": {
+    "ttp_signal": false,
+    "note": "COVID-19 BSI prevalence/risk factors, no TTP"
+  },
+  "36091350": {
+    "ttp_signal": false,
+    "note": "Nigeria rural BSI bacteriology surveillance, no TTP"
+  },
+  "35899276": {
+    "ttp_signal": false,
+    "note": "Dalbavancin sequential vs SoC for SAB; duration of bacteremia (days), not BC TTP"
+  },
+  "35799715": {
+    "ttp_signal": false,
+    "note": "Pediatric cardiac BC trends Pakistan, positivity rate only"
+  },
+  "35693849": {
+    "ttp_signal": false,
+    "note": "CRGNB BSI hematologic malignancies risk factors, no TTP"
+  },
+  "35630294": {
+    "ttp_signal": false,
+    "note": "MSSA combo therapy meta-analysis; duration of bacteremia, not BC TTP"
+  },
+  "35450105": {
+    "ttp_signal": false,
+    "note": "Neonatal sepsis Tanzania predictors of mortality, no TTP"
+  },
+  "35369711": {
+    "ttp_signal": true,
+    "note": "Commentary on Chavez 35291804; discusses TTP & bacteremia duration in context of new CMBC systems"
+  },
+  "35291804": {
+    "ttp_signal": true,
+    "note": "Virtuo vs VersaTREK in SAB; median TTP shorter post (13.3h vs 17.8h); prolonged SAB more common post"
+  },
+  "35054007": {
+    "ttp_signal": false,
+    "note": "Febrile neutropenia post-ASCT; CRP/fever predict BC positivity (yes/no), not TTP"
+  },
+  "36168462": {
+    "ttp_signal": false,
+    "note": "Community-onset BSI South Africa epidemiology, no TTP"
+  },
+  "35602233": {
+    "ttp_signal": false,
+    "note": "IDU-BSI S. aureus genomic epi; longer bacteremia duration (days), not BC TTP"
+  },
+  "35238358": {
+    "ttp_signal": false,
+    "note": "Enteric fever children; predictors of BC positivity, not TTP"
+  },
+  "34945119": {
+    "ttp_signal": true,
+    "note": "IE prolonged BC incubation study; TTP >120h threshold used to assess 5d incubation cutoff"
+  },
+  "34408935": {
+    "ttp_signal": true,
+    "note": "Dysgonomonas case report; reports no differential TTP between peripheral and port BC"
+  },
+  "34258313": {
+    "ttp_signal": false,
+    "note": "STAPH pathway MRSA BSI; bacteremia duration (days), not BC TTP"
+  },
+  "34174435": {
+    "ttp_signal": false,
+    "note": "HIV pediatric BSI Mozambique surveillance, no TTP"
+  },
+  "34074985": {
+    "ttp_signal": false,
+    "note": "Hypoglycemia predicts BC positivity in cirrhosis, not TTP"
+  },
+  "34045801": {
+    "ttp_signal": false,
+    "note": "COVID-19 BSI prevalence/etiology Jaipur, no TTP"
+  },
+  "33579205": {
+    "ttp_signal": true,
+    "note": "BC pre-incubation storage delays multi-centre; longer storage increases TTD"
+  },
+  "33500637": {
+    "ttp_signal": true,
+    "note": "BacT/ALERT FAN+ vs BACTEC inactivation; FA Plus TTD 14.7h vs BACTEC aerobic 19.55h"
+  },
+  "33487864": {
+    "ttp_signal": true,
+    "note": "CRBSI prevalence; uses differential TTP for diagnosis confirmation"
+  },
+  "33258440": {
+    "ttp_signal": true,
+    "note": "Nonautomated BC blind subculture timing (Cambodia); earlier subculture shortens TTD for B. pseudomallei"
+  },
+  "33239377": {
+    "ttp_signal": true,
+    "note": "Virtuo BacT/Alert optimal incubation; TTP per organism, 99% positive by 91.5h aerobic/108h anaerobic"
+  },
+  "33196562": {
+    "ttp_signal": false,
+    "note": "Pediatric SAB; RVS → longer bacteremia duration (days), not BC TTP"
+  },
+  "33034779": {
+    "ttp_signal": true,
+    "note": "BACT/ALERT VIRTUO delayed-entry impact; baseline TTD 9.6h, +24-36h pre-incubation delay tested"
+  },
+  "32860099": {
+    "ttp_signal": false,
+    "note": "VLBW colonization-to-BC pathogen match; interval days from swab, not BC TTP"
+  },
+  "33121610": {
+    "ttp_signal": true,
+    "note": "Review of modern BC methods; explicitly discusses preanalytic/analytical factors reducing TTP"
+  },
+  "32908944": {
+    "ttp_signal": false,
+    "note": "OPAT ceftriaxone vs oxacillin/cefazolin for MSSA BSI; bacteremia duration (days), not BC TTP"
+  },
+  "32839217": {
+    "ttp_signal": false,
+    "note": "MRSA combo BL+VAN/DAP meta-analysis; shortened bacteremia duration (days), not BC TTP"
+  },
+  "32600427": {
+    "ttp_signal": true,
+    "note": "Pediatric CLABSI Sri Lanka long-term CVCs; uses differential TTP (DTP) for CLABSI detection"
+  },
+  "32582483": {
+    "ttp_signal": false,
+    "note": "Pediatric CAP BC value; positivity rate predictors, not TTP"
+  },
+  "32507857": {
+    "ttp_signal": false,
+    "note": "Host immune gene variants (TIRAP SNPs) and SAB duration (days), not BC TTP"
+  },
+  "32404482": {
+    "ttp_signal": true,
+    "note": "COVID-19 BC utilization NYC; reports >98% TTP within 4d (supports shortened incubation)"
+  },
+  "31945052": {
+    "ttp_signal": false,
+    "note": "Typhoid surveillance under-detection / missing-data methods, no TTP"
+  },
+  "31767719": {
+    "ttp_signal": true,
+    "note": "P. aeruginosa BSI mortality; shorter TTP independent predictor of early mortality (aOR 0.88, p=0.010)"
+  },
+  "31636069": {
+    "ttp_signal": false,
+    "note": "Prospective SAB durations cohort (Korea, n=1917); defines new persistent SAB by bacteremia duration days, not BC TTP"
+  },
+  "31365924": {
+    "ttp_signal": false,
+    "note": "IL-1β/IL-10 host responses in SAB vary with therapy; no BC TTP"
+  },
+  "30623614": {
+    "ttp_signal": true,
+    "note": "Virtuo vs 3D BC systems Korea (n=952); median TTD 11.5h vs 11.8h, shorter in Virtuo for SA/E.coli"
+  },
+  "34368673": {
+    "ttp_signal": false,
+    "note": "BC fill volume QI project (UK); positivity vs volume, not TTP"
+  },
+  "32128336": {
+    "ttp_signal": false,
+    "note": "Intermittent neg BCs in SAB (n=1071); bacteremia duration days, not BC TTP"
+  },
+  "31660401": {
+    "ttp_signal": false,
+    "note": "ASP-led BC communication; time to optimal therapy, not BC TTP"
+  },
+  "31660362": {
+    "ttp_signal": false,
+    "note": "PK/PD obesity vs nonobese Enterobacteriaceae BSI; bacteremia duration (days), not BC TTP"
+  },
+  "31637596": {
+    "ttp_signal": false,
+    "note": "Vanc loading dose MRSA BSI failure; bacteremia duration ≥7d as failure criterion, not BC TTP"
+  },
+  "31456951": {
+    "ttp_signal": true,
+    "note": "BACTEC vs BacT/Alert vs VersaTREK TTD comparison (Chinese tertiary); VersaTREK shortest TTD in abx-free samples"
+  },
+  "31291897": {
+    "ttp_signal": true,
+    "note": "PJI tissue culture in Virtuo BC; median detection time 11.1h, 89% positive ≤24h vs 27% conventional"
+  },
+  "31270693": {
+    "ttp_signal": false,
+    "note": "RESIST-3 immunoassay from positive BC; immunoassay positive in minutes, not BC TTP"
+  },
+  "31161475": {
+    "ttp_signal": true,
+    "note": "Candidemia in immunocompromised ICU; explicitly notes 3d antifungal delay in line with delay of BC positivity"
+  },
+  "31139670": {
+    "ttp_signal": false,
+    "note": "Hourly effect of pre-BC IV abx on BC positivity rate in ED, not TTP"
+  },
+  "31123543": {
+    "ttp_signal": false,
+    "note": "CO-SAB epidemiology; bacteremia duration mentioned (days), not BC TTP"
+  },
+  "31011854": {
+    "ttp_signal": false,
+    "note": "Complicated SSSI; BC positivity rate factors, not TTP"
+  },
+  "30858203": {
+    "ttp_signal": false,
+    "note": "DAP+CPT vs SoC MRSA pilot RCT; designed for bacteremia duration but halted for mortality difference, no BC TTP"
+  },
+  "30837964": {
+    "ttp_signal": true,
+    "note": "VIRTUO vs BTA3D vs BACTEC simulated TTD; VIRTUO median 11.6/10.1h aerobic/anaerobic vs ~13h others, 330 isolates"
+  },
+  "30623615": {
+    "ttp_signal": false,
+    "note": "MIS-CLASSIFIED: this PMID is about glycated Hb (HbA1c) HLC-723 G11 analyzer, not blood culture"
+  },
+  "30568369": {
+    "ttp_signal": false,
+    "note": "NLCR for predicting bacteremia in ED, no TTP"
+  },
+  "30559815": {
+    "ttp_signal": false,
+    "note": "ICU infection markers (NLCR, neopterin, pro-ADM, PCT) as bacteremia predictors, no TTP"
+  },
+  "30558635": {
+    "ttp_signal": false,
+    "note": "Letter; PCT/CRP/IL-6 diagnostic accuracy for BC positivity (yes/no), not TTP"
+  },
+  "30555848": {
+    "ttp_signal": false,
+    "note": "Decision analysis echo in low-risk SAB; brief bacteremia duration as eligibility criterion, not BC TTP"
+  },
+  "30210487": {
+    "ttp_signal": true,
+    "note": "VersaTrek 528 vs BACTEC FX 400 (China); TTD comparable across systems, positive rates similar"
+  },
+  "30135230": {
+    "ttp_signal": true,
+    "note": "US 13-hospital BC TAT study; TTD/Gram stain/ID/AST times analyzed across 165k specimens"
+  },
+  "29898999": {
+    "ttp_signal": true,
+    "note": "BacT/Alert FA vs T2Candida; TTD ~5h vs 27-30h for Candida; fluconazole increased BC TTD by 14.8-67h"
+  },
+  "29843781": {
+    "ttp_signal": false,
+    "note": "DASH-RCT protocol DAP+BL vs placebo MSSA; primary outcome bacteremia duration (days), not BC TTP"
+  },
+  "29401558": {
+    "ttp_signal": false,
+    "note": "Same-day ID/AST from positive BC broths via short-term incubation, not BC TTP"
+  },
+  "29397962": {
+    "ttp_signal": false,
+    "note": "Pediatric CLABSI clearance; time to recurrent positive BC after tCVC removal (days), not BC TTP"
+  },
+  "29378704": {
+    "ttp_signal": false,
+    "note": "Vanc MIC MRSA bacteremia; secondary outcome bacteremia duration ≥7d, not BC TTP"
+  },
+  "29360429": {
+    "ttp_signal": true,
+    "note": "Corynebacterium bacteremia vs contamination; shorter TTP (p=0.006) distinguishes true bacteremia"
+  },
+  "30906173": {
+    "ttp_signal": false,
+    "note": "Arcanobacterium CNS abscess + bacteremia case report, no TTP"
+  },
+  "29207967": {
+    "ttp_signal": false,
+    "note": "MALDI-TOF ID + AST from positive BC; reduces TAT to ID/AST (61h vs 83h), not BC TTP"
+  },
+  "28701418": {
+    "ttp_signal": false,
+    "note": "Lab workflow/cost analysis of culturing periprosthetic tissues in BC bottles; no TTP measurement."
+  },
+  "28630688": {
+    "ttp_signal": false,
+    "note": "AMR surveillance from Ghana BSI; no TTP/TTD/DTP measurement."
+  },
+  "28589426": {
+    "ttp_signal": false,
+    "note": "Blood culture positivity rates in SSTI by clinical severity; no TTP measurement."
+  },
+  "28296967": {
+    "ttp_signal": true,
+    "note": "Colorimetric sensor array vs BacT/Alert in simulated yeast BCs; TTD compared (CSA 6.8 h faster)."
+  },
+  "28036369": {
+    "ttp_signal": false,
+    "note": "Clinical impact of direct MALDI-ToF post-positivity; analyzes day-2 vs day-1 ID, not TTP."
+  },
+  "27776490": {
+    "ttp_signal": false,
+    "note": "Neonatal BSI epidemiology / antibiotic adequacy in Ghana; no TTP measurement."
+  },
+  "27763479": {
+    "ttp_signal": true,
+    "note": "Conventional BC vs BACTEC 9050: mean time to detection compared (P<0.0001)."
+  },
+  "27757046": {
+    "ttp_signal": false,
+    "note": "Procalcitonin biomarker vs BC findings; no TTP measurement."
+  },
+  "27539221": {
+    "ttp_signal": false,
+    "note": "Trends/epidemiology of BSI at Ghanaian hospital; no TTP measurement."
+  },
+  "27520338": {
+    "ttp_signal": false,
+    "note": "Direct AST method from positive BCs; mentions hours-from-positivity but doesn't measure TTP itself."
+  },
+  "27215201": {
+    "ttp_signal": false,
+    "note": "MSSA bacteremia β-lactam vs vancomycin; secondary outcome 'duration of bacteremia' (days), not BC TTP."
+  },
+  "27191005": {
+    "ttp_signal": false,
+    "note": "Peripheral IV as source of SAB; mentions 'longer bacteremia duration', not TTP."
+  },
+  "27112143": {
+    "ttp_signal": false,
+    "note": "β-lactam vs vancomycin in MSSA; reports duration of bacteremia (97.1 vs 70.7 h) — clearance time, not BC TTP."
+  },
+  "26956367": {
+    "ttp_signal": true,
+    "note": "EUROBACT sub-analysis: explicit comparison of time to BC positivity, fungemia 48.7 h vs bacteremia 38.1 h (p=0.0004)."
+  },
+  "26646549": {
+    "ttp_signal": false,
+    "note": "Vancomycin MIC creep/trough in pediatric SAB; reports duration of bacteremia, not TTP."
+  },
+  "26656373": {
+    "ttp_signal": false,
+    "note": "Shapiro score + PCT to predict BC positivity; no TTP measurement."
+  },
+  "26587217": {
+    "ttp_signal": false,
+    "note": "BC bottle vs standard culture bottle for parapneumonic effusion: positivity rate only, no TTP."
+  },
+  "26554930": {
+    "ttp_signal": true,
+    "note": "Four anaerobic BC bottles compared: explicit TTD comparison (BACTEC Lytic 18 h vs others, p<0.0001)."
+  },
+  "26436013": {
+    "ttp_signal": false,
+    "note": "Predictors of BC positivity in severe pediatric pneumonia (WBC, CRP, temp); no TTP."
+  },
+  "26311144": {
+    "ttp_signal": false,
+    "note": "Blood mass/volume correlation with BC positivity; no TTP measurement."
+  },
+  "26082503": {
+    "ttp_signal": false,
+    "note": "Gentamicin add-on in pediatric E. faecalis bacteremia; outcome 'time to bacterial clearance' (post-tx duration of bacteremia), not BC TTP."
+  },
+  "25994165": {
+    "ttp_signal": false,
+    "note": "Verigene microarray for Gram-neg ID from positive BCs; post-positivity ID, no TTP measurement."
+  },
+  "25740775": {
+    "ttp_signal": true,
+    "note": "Sonication fluid inoculated into BC bottles for OIAI: TTP shorter, 72% detected after 1 day vs conventional cultures."
+  },
+  "25653400": {
+    "ttp_signal": true,
+    "note": "MGIT vs Myco/F lytic for MTB from pleural fluid: TTP 12.7 vs 20.7 days (P=0.007)."
+  },
+  "25098681": {
+    "ttp_signal": true,
+    "note": "BACTEC Mycosis vs Aerobic media for fungi: TTP/TTD significantly shorter in Mycosis (mean 35.5 h for C. glabrata)."
+  },
+  "25473600": {
+    "ttp_signal": true,
+    "note": "Case report: Candida utilis CRBSI diagnosed by paired BC differential time to positivity (DTP)."
+  },
+  "25350577": {
+    "ttp_signal": false,
+    "note": "Methods paper on BC pellet preparation for ID/AST; post-positivity workflow, no TTP measurement."
+  },
+  "24936596": {
+    "ttp_signal": false,
+    "note": "Cefazolin vs oxacillin in MSSA bacteremia; duration of bacteremia (7 vs 3 days) is clearance time, not BC TTP."
+  },
+  "24389282": {
+    "ttp_signal": false,
+    "note": "ICU BSI ecology/AMR surveillance in North India; no TTP measurement."
+  },
+  "24298435": {
+    "ttp_signal": false,
+    "note": "Shaking chills/temperature as predictors of bacteremia; predicts BC positivity, not TTP."
+  },
+  "23985911": {
+    "ttp_signal": true,
+    "note": "BACTEC Mycosis vs Plus Aerobic for Candida with antifungals; TTP significantly prolonged with antifungals (P<0.001)."
+  },
+  "23853696": {
+    "ttp_signal": true,
+    "note": "Electricity-free vs conventional BC for typhoidal Salmonella: median TTP 2 days reported and compared."
+  },
+  "23804393": {
+    "ttp_signal": false,
+    "note": "BinaxNOW immunochromatographic ID from positive BC bottles; post-positivity ID workflow, no TTP measurement."
+  },
+  "23619238": {
+    "ttp_signal": false,
+    "note": "Echo utility in uncomplicated SAB; uses bacteremia duration ≥3d as classification, no TTP measurement."
+  },
+  "23486710": {
+    "ttp_signal": true,
+    "note": "BacT/Alert FA/FN Plus neutralization of antimicrobials: TTD compared with/without antibiotics in test bottles."
+  },
+  "23349061": {
+    "ttp_signal": true,
+    "note": "BacT/Alert aerobic vs anaerobic bottles 2002-2007: mean TTD 19.0 vs 20.1 h; earlier positivity of anaerobic flagged Enterobacteriaceae."
+  },
+  "23143623": {
+    "ttp_signal": true,
+    "note": "Four BC media compared for Candida + fluconazole: TTD measured (PA 24.5 h vs others, >2.5 h faster)."
+  },
+  "22966128": {
+    "ttp_signal": false,
+    "note": "Serum IL-10 prognostic for SAB; uses bacteremia duration >4d, no BC TTP measurement."
+  },
+  "22438880": {
+    "ttp_signal": false,
+    "note": "Direct MALDI-TOF MS post-positivity ID reduces ID turnaround 28.8 h; not BC TTP."
+  },
+  "22403696": {
+    "ttp_signal": true,
+    "note": "CR-BSI ICU diagnostic comparison: 'differential time period of CVC culture vs peripheral culture positivity >2 h' (DTP) used as conservative method."
+  },
+  "21898120": {
+    "ttp_signal": false,
+    "note": "Aminoglycoside synergy in persistent SAB/endocarditis; inclusion was >72h SAB; outcomes are recurrence/mortality, not TTP."
+  },
+  "21715585": {
+    "ttp_signal": true,
+    "note": "Danish fungemia cohort: notes C. glabrata / arterial-line cultures needed longer incubation — TTP-related comparison flagged for reviewer."
+  },
+  "21653761": {
+    "ttp_signal": true,
+    "note": "BacT/Alert MB vs Myco/F Lytic vs Isolator for MTB bacteremia: mean times to detection 16.4 vs 20.0 vs 23.8 days; TTP correlated with bacterial load."
+  },
+  "21490189": {
+    "ttp_signal": true,
+    "note": "Early Lyme BC yield: 90% positivity detected within 7 days of incubation — time-to-positivity dynamics reported."
+  },
+  "21307220": {
+    "ttp_signal": true,
+    "note": "BD Bactec Plus vs VersaTREK Redox media with antibiotics: explicit TTD comparison; Bactec faster overall."
+  },
+  "21270228": {
+    "ttp_signal": true,
+    "note": "Bactec Plus Aerobic/F vs VersaTREK Redox 1 for Candida + antifungals: median LTD (length of time to detection) compared (10.8 h difference with antifungals)."
+  },
+  "21173172": {
+    "ttp_signal": false,
+    "note": "agr dysfunction & SAB mortality; uses 'longer duration of bacteremia' as background, not TTP measurement."
+  },
+  "21092087": {
+    "ttp_signal": false,
+    "note": "Rifampin for persistent CoNS bacteremia in neonates: uses duration of bacteremia (days), not BC TTP."
+  },
+  "21083886": {
+    "ttp_signal": true,
+    "note": "PCT and bacteremia in urosepsis: TTP of E. coli BCs linearly correlated with log PCT (R²=0.278, P=0.007) — explicit TTP outcome."
+  },
+  "20237093": {
+    "ttp_signal": false,
+    "note": "Direct MALDI-TOF ID from positive BC bottles; post-positivity ID (~100 min), not TTP."
+  },
+  "20042634": {
+    "ttp_signal": true,
+    "note": "MT-PCR vs BC for candidemia: MT-PCR accelerated time to detection by mean 2.2 days (range 0.5-8) — explicit TTP comparison."
+  },
+  "19884371": {
+    "ttp_signal": true,
+    "note": "Cancer candidemia: median incubation period (BC collection → positivity) 32.1 h, associated with in-hospital mortality (HR 1.025/h, P=0.001)."
+  },
+  "19369443": {
+    "ttp_signal": true,
+    "note": "Bactec 9240 vs BacT/Alert for UCB bacterial contamination: median LTD compared (P=0.0449 whole blood, P=0.0037 RBC)."
+  },
+  "17452488": {
+    "ttp_signal": false,
+    "note": "Vancomycin killing activity vs time to clearance of MRSA bacteremia; clearance time is post-treatment duration, not BC TTP."
+  },
+  "17166960": {
+    "ttp_signal": true,
+    "note": "BACTEC PLUS vs BacT/Alert FA with antibiotics: time to detection compared across antibiotic/organism combinations."
+  },
+  "17122016": {
+    "ttp_signal": true,
+    "note": "Clinical comparison VersaTREK vs BacT/ALERT: TTD compared (no overall difference but reported)."
+  },
+  "16757635": {
+    "ttp_signal": true,
+    "note": "BACTEC 9240 vs BacT/Alert for platelet contamination: LTD 1.7 h shorter in BACTEC, statistically significant."
+  },
+  "16390985": {
+    "ttp_signal": true,
+    "note": "HACEK extended BC incubation: average time to detection reviewed; supports dropping extended incubation."
+  },
+  "16259623": {
+    "ttp_signal": false,
+    "note": "Mono- vs polymicrobial P. aeruginosa nBSI: SIRS scores/mortality compared, no TTP measurement."
+  },
+  "15872297": {
+    "ttp_signal": true,
+    "note": "BacT/ALERT FA/FN incubation duration: TTD reviewed for 35,500 BCs; 97.5% of isolates detected in first 3 days."
+  },
+  "15834090": {
+    "ttp_signal": false,
+    "note": "BC bottles for corneal organ culture sterility (fungi); TTD reported but topic is eye-bank sterility testing, not BSI TTP."
+  },
+  "15635007": {
+    "ttp_signal": true,
+    "note": "Effect of Candida inoculum size on BACTEC 9240: time to growth detection shorter with larger inocula — TTD measured."
+  },
+  "15472312": {
+    "ttp_signal": true,
+    "note": "BacT/ALERT FN vs SN anaerobic media: mean TTD 16.8 vs 18.2 h overall; B. fragilis 28 vs 60 h."
+  },
+  "15131190": {
+    "ttp_signal": true,
+    "note": "BACTEC MYCO/F LYTIC vs Peds Plus/F and Plus Aerobic/F for B. melitensis: TTD 101.4 vs 65.5 h (P=0.004)."
+  },
+  "14532209": {
+    "ttp_signal": true,
+    "note": "Simulated candidemia in BACTEC 9240 Plus Aerobic/Anaerobic: mean TTD ~24 h overall, C. glabrata aerobic 120.9 h vs anaerobic 22.1 h (P<0.001)."
+  },
+  "12734238": {
+    "ttp_signal": true,
+    "note": "BACTEC 13A, MYCO/F LYTIC, BacT/ALERT MB, ISOLATOR 10 for mycobacteremia: mean times to detection differ significantly across systems."
+  },
+  "12202586": {
+    "ttp_signal": true,
+    "note": "Lysis filtration vs BACTEC for odontogenic pediatric bacteremia: TTD shorter for BACTEC (aerobic 9.6 vs 43.7 h; anaerobic 9.9 vs 45.1 h)."
+  },
+  "11474007": {
+    "ttp_signal": true,
+    "note": "BacT/Alert PF vs Pedi-BacT pediatric bottles: TTD compared; yeast significantly faster in PF (22.9 h), staphylococci in Pedi-BacT (22.5 h)."
+  },
+  "11136783": {
+    "ttp_signal": true,
+    "note": "Classic DTP paper: earlier positivity of central venous vs peripheral BCs for CRBSI in cancer patients; cutoff ≥+3 h gave 100% specificity, 81% sensitivity."
+  },
+  "10655337": {
+    "ttp_signal": false,
+    "note": "PCR-SSCP for rapid bacterial ID from positive BCs; reports time to ID after BC positivity (1-8 d biochem vs 7 h PCR), not BC TTP."
+  },
+  "9874667": {
+    "ttp_signal": false,
+    "note": "Immune cell/cytokine determinants of BSI outcomes in Thai HIV patients; no TTP measurement."
+  },
+  "10645233": {
+    "ttp_signal": true,
+    "note": "Lysis centrifugation vs pour plate vs broth for melioidosis: median TTP 39.3 vs 45.5 vs 61.8 h (P<0.001); inverse correlation with quantitative load."
+  },
+  "10325369": {
+    "ttp_signal": true,
+    "note": "BACTEC 9240 7-day incubation: TTD distribution for bacteria/yeasts — 4 days sufficient for bacteria, 6 days for yeasts."
+  },
+  "9828828": {
+    "ttp_signal": true,
+    "note": "Continuous monitoring BC for CRBSI: TTP/lag period significantly shorter for central-line vs peripheral BCs; precursor DTP concept."
+  },
+  "9620384": {
+    "ttp_signal": true,
+    "note": "Multicenter BACTEC 9050 vs 9240: TTD compared; anaerobes recovered earlier with 9240 (35.0 vs 61.4 h, P<0.01)."
+  },
+  "9508291": {
+    "ttp_signal": true,
+    "note": "BACTEC Plus/F vs BacT/Alert FAN aerobic+anaerobic: TTD compared; Gram-pos faster on BACTEC, Enterobacteriaceae faster on BacT/Alert."
+  },
+  "9163464": {
+    "ttp_signal": true,
+    "note": "BACTEC 9240 Plus Aerobic/F resin vs Isolator: median TTD favors BACTEC for all pathogens combined (P<0.05); per-species TTD reported."
+  },
+  "9163448": {
+    "ttp_signal": true,
+    "note": "BACTEC 9240 Peds Plus vs Isolator 1.5 for B. melitensis: TTD comparison; 36% of paired-positive cultures positive ≥1 day earlier by BACTEC (P=0.045)."
+  },
+  "9155676": {
+    "ttp_signal": true,
+    "note": "Automated system vs Septichek for CAPD peritonitis: time to detection more rapid with AS (P<0.002); borderline (peritoneal fluid, not blood) but TTD measured."
+  },
+  "9114401": {
+    "ttp_signal": true,
+    "note": "BacT/Alert FAN aerobic vs ESP 80A pediatric BCs: median TTD 13.6 vs 15.7 h (P<0.001)."
+  },
+  "9059190": {
+    "ttp_signal": true,
+    "note": "Neonatal BC volume study: explicit TTP outcome (median 22.4 h); no correlation between volume and TTP found."
+  },
+  "8968880": {
+    "ttp_signal": true,
+    "note": "BACTEC Plus/F resin vs BacT/Alert aerobic FAN: average TTD 16.9 vs 18.7 h within first 72 h; large differences for streptococci/yeasts."
+  },
+  "8904411": {
+    "ttp_signal": true,
+    "note": "BACTEC 9240 vs Difco ESP with delayed-entry vials: TTD compared for delayed and non-delayed vials at RT and 35°C."
+  },
+  "8818873": {
+    "ttp_signal": true,
+    "note": "Isolator 1.5 vs BACTEC NR660 6A for pediatric fungemia: mean TTD same in each system; per-isolate timing reported (37 same day, 9 NR6A earlier, 14 ISO earlier)."
+  },
+  "8748264": {
+    "ttp_signal": true,
+    "note": "ESP 80A vs Isolator vs Septi-Chek aerobic: median TTD compared; ESP/Isolator significantly shorter than Septi-Chek (P<0.001)."
+  },
+  "7790471": {
+    "ttp_signal": true,
+    "note": "BacT/Alert standard vs FAN aerobic: mean TTD 16.1 vs 16.0 h; recovery yield improved with FAN."
+  },
+  "7790443": {
+    "ttp_signal": true,
+    "note": "CoNS strain relatedness in multiple BCs: time to growth measured (2.1 vs 1.9 days, related vs unrelated)."
+  },
+  "7615710": {
+    "ttp_signal": true,
+    "note": "ESP 384 vs Septi-Chek pediatric BCs: median TTD 14.0 vs 34.5 h (P<0.001); 78% vs 31% by 24 h."
+  },
+  "7494044": {
+    "ttp_signal": true,
+    "note": "BACTEC 9240 vs BACTEC NR 660 (high-volume aerobic resin): positive cultures detected 4.3 h faster on 9240 (21 vs 25.3 h)."
+  },
+  "7494013": {
+    "ttp_signal": true,
+    "note": "BacT/Alert standard vs FAN anaerobic: mean TTD 14.2 vs 16.1 h; differs by organism (E. coli/anaerobes faster in FAN)."
+  },
+  "8195397": {
+    "ttp_signal": true,
+    "note": "Difco ESP vs BACTEC NR660: organisms detected >6 h earlier in ESP, earlier TTD significant overall."
+  },
+  "8195374": {
+    "ttp_signal": true,
+    "note": "Isolator inhibits MAC in BACTEC 12B: TTD 18 d (LJ) vs 24 d (12B) for blood; reverse pattern in non-blood (28 vs 15 d)."
+  },
+  "8051256": {
+    "ttp_signal": true,
+    "note": "ESP vs BacT/Alert continuous-monitoring: aerobic mean TTD 18.3 vs 22.0 h (P<0.001); anaerobes 21.6 vs 50.8 h (P<0.05)."
+  },
+  "7929769": {
+    "ttp_signal": true,
+    "note": "o.a.s.i.s. (headspace pressure) vs BACTEC 460: times to positivity significantly shorter in o.a.s.i.s."
+  },
+  "8463388": {
+    "ttp_signal": true,
+    "note": "Pedi-BacT vs BD 20-ml broth tube: avg TTD compared; Pedi-BacT 11.5-29.7 h vs BD 20.3-66.4 h depending on organism."
+  },
+  "8458950": {
+    "ttp_signal": true,
+    "note": "Multicenter BACTEC 9240 (fluorescent CO2) vs NR 660: avg TTD 20.2 vs 27.5 h; 123 of 420 dual-positives faster in 9240 (P<0.001)."
+  },
+  "1401215": {
+    "ttp_signal": true,
+    "note": "Sentinel vs Bactec: times to positivity (after first 12 h) similar."
+  },
+  "2007644": {
+    "ttp_signal": true,
+    "note": "BACTEC PEDS Plus vs NR-6A pediatric: TTD compared (PEDS Plus earlier for CoNS and H. influenzae, P<0.05 and P<0.01)."
+  },
+  "1939578": {
+    "ttp_signal": true,
+    "note": "BACTEC 26 Plus resin vs Isolator 10: TTD similar; Isolator first positive 59/197 vs BACTEC 45/197 for gram-neg episodes."
+  },
+  "2506221": {
+    "ttp_signal": false,
+    "note": "P. aeruginosa O16 outbreak in heme-onc: duration of bacteremia as outcome predictor, no BC TTP measurement."
+  },
+  "3366871": {
+    "ttp_signal": true,
+    "note": "Isolator lysis-centrifugation vs BACTEC 13A for MAC in AIDS: avg TTD 16 vs 14 days (no significant difference)."
+  },
+  "3366869": {
+    "ttp_signal": true,
+    "note": "BACTEC 6B vs 6B+gelatin+V-factor analog: H. influenzae mean TTD 8.5 vs 15.9 h (P<0.01); C. albicans 34.9 vs 71.6 h."
+  },
+  "3069859": {
+    "ttp_signal": true,
+    "note": "BACTEC NR-660 vs first-day subculturing: 97% positives detected with equal/greater rapidity by NR-660 — TTD comparison."
+  },
+  "3571479": {
+    "ttp_signal": true,
+    "note": "BC methods for L. pneumophila in guinea pig blood: biphasic 5 d vs other methods 2-3 d for positivity (P<10⁻⁵) — TTD compared."
+  },
+  "3546365": {
+    "ttp_signal": true,
+    "note": "Septi-Chek vs BACTEC with agitation/subculturing: median TTD 15.8 (BACTEC) vs 18.6 h (RSC-TSB) for common isolates."
+  },
+  "6376537": {
+    "ttp_signal": true,
+    "note": "Isolator 1.5 vs BACTEC radiometric for pediatric bacteremia: mean TTD 4.1 h faster with Isolator 1.5; time to colonies 26.6 h faster."
+  },
+  "6826708": {
+    "ttp_signal": true,
+    "note": "BACTEC 6B vs 16B (resin) for patients on antimicrobials: 16B significantly shortened TTP; 13/49 dual-positives detected 1-5 d earlier in 16B."
+  },
+  "6761357": {
+    "ttp_signal": false,
+    "note": "Latex agglutination for direct S. aureus ID from BC fluid; positive before formal BC positivity, but no TTP measurement of BCs."
+  },
+  "6752196": {
+    "ttp_signal": true,
+    "note": "BACTEC bedside vs Vacutainer transfer inoculation: time to positivity similar between methods — TTP compared."
+  },
+  "328398": {
+    "ttp_signal": false,
+    "note": "Neonatal rat E. coli colonization vs H. influenzae b challenge; uses 'duration of bacteremia' in animal model, no BC TTP."
+  }
+}

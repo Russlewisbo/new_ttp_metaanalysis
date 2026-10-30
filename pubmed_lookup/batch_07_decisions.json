@@ -1,0 +1,46 @@
+{
+  "42072782": {
+    "ttp_signal": false,
+    "note": "Review of rapid molecular diagnostics for BSI in CKD, no TTP measurement"
+  },
+  "41837624": {
+    "ttp_signal": true,
+    "note": "Manual vs automated BC time-to-positive culture compared, HR 1.32 faster automated (Laos)"
+  },
+  "41797848": {
+    "ttp_signal": false,
+    "note": "BC volume vs positivity/contamination rate, not TTP"
+  },
+  "41716267": {
+    "ttp_signal": false,
+    "note": "BC positivity rate determinants in brucellosis, not TTP"
+  },
+  "41613423": {
+    "ttp_signal": false,
+    "note": "EHR optimization during BC bottle shortage, no TTP"
+  },
+  "41568065": {
+    "ttp_signal": false,
+    "note": "Duration of bacteremia (days) as OAI risk factor in SAB, not BC TTP"
+  },
+  "41296234": {
+    "ttp_signal": true,
+    "note": "P. aeruginosa BSI median TTP aerobic 14.8h vs anaerobic 16.5h; anaerobic growth predicts mortality"
+  },
+  "41816783": {
+    "ttp_signal": false,
+    "note": "BC positivity rate determinants in pediatric CAP Tanzania, not TTP"
+  },
+  "41327010": {
+    "ttp_signal": false,
+    "note": "BSI prevalence/AMR Lagos, not TTP"
+  },
+  "41059855": {
+    "ttp_signal": true,
+    "note": "BD BACTEC Mycosis IC/F vs standard bottles TTD comparison for fungemia"
+  },
+  "40970753": {
+    "ttp_signal": false,
+    "note": "ChroMIC rapid AST direct from positive BC, not TTP itself"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "23985911": {
+    "ttp_signal": true,
+    "note": "BACTEC Mycosis vs Plus Aerobic for Candida with antifungals; TTP significantly prolonged with antifungals (P<0.001)."
+  },
+  "23853696": {
+    "ttp_signal": true,
+    "note": "Electricity-free vs conventional BC for typhoidal Salmonella: median TTP 2 days reported and compared."
+  },
+  "23804393": {
+    "ttp_signal": false,
+    "note": "BinaxNOW immunochromatographic ID from positive BC bottles; post-positivity ID workflow, no TTP measurement."
+  },
+  "23619238": {
+    "ttp_signal": false,
+    "note": "Echo utility in uncomplicated SAB; uses bacteremia duration ≥3d as classification, no TTP measurement."
+  },
+  "23486710": {
+    "ttp_signal": true,
+    "note": "BacT/Alert FA/FN Plus neutralization of antimicrobials: TTD compared with/without antibiotics in test bottles."
+  },
+  "23349061": {
+    "ttp_signal": true,
+    "note": "BacT/Alert aerobic vs anaerobic bottles 2002-2007: mean TTD 19.0 vs 20.1 h; earlier positivity of anaerobic flagged Enterobacteriaceae."
+  },
+  "23143623": {
+    "ttp_signal": true,
+    "note": "Four BC media compared for Candida + fluconazole: TTD measured (PA 24.5 h vs others, >2.5 h faster)."
+  },
+  "22966128": {
+    "ttp_signal": false,
+    "note": "Serum IL-10 prognostic for SAB; uses bacteremia duration >4d, no BC TTP measurement."
+  },
+  "22438880": {
+    "ttp_signal": false,
+    "note": "Direct MALDI-TOF MS post-positivity ID reduces ID turnaround 28.8 h; not BC TTP."
+  },
+  "22403696": {
+    "ttp_signal": true,
+    "note": "CR-BSI ICU diagnostic comparison: 'differential time period of CVC culture vs peripheral culture positivity >2 h' (DTP) used as conservative method."
+  }
+}

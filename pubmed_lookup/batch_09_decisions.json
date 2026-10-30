@@ -1,0 +1,46 @@
+{
+  "39189760": {
+    "ttp_signal": true,
+    "note": "BC media neutralization study (BACT/ALERT FA/FN Plus vs DL vs REDOX); TTD reported for 9 microorg-antimicrobial combos"
+  },
+  "39184333": {
+    "ttp_signal": false,
+    "note": "Case report prosthetic-valve IE from single positive BC bottle, no TTP measurement"
+  },
+  "38774119": {
+    "ttp_signal": true,
+    "note": "Ascites direct inoculation into BC bottles; time-to-positivity measured as secondary outcome (NS)"
+  },
+  "38526076": {
+    "ttp_signal": true,
+    "note": "Veterinary calves; Cox PH comparison of TTP between PP and PA BC media (NS)"
+  },
+  "38500029": {
+    "ttp_signal": true,
+    "note": "R. pickettii/Microbacterium case report; mentions TTP >48h criterion for Microbacterium contamination"
+  },
+  "38025573": {
+    "ttp_signal": true,
+    "note": "CLABSI surveillance; uses differential time to positivity (DTP) for diagnosis"
+  },
+  "37887217": {
+    "ttp_signal": false,
+    "note": "PVL-neg CA-MRSA bacteremia Japan; bacteremia duration (days), not BC TTP"
+  },
+  "37727170": {
+    "ttp_signal": false,
+    "note": "Brucella diagnostic comparison (culture vs serology), no TTP"
+  },
+  "37533929": {
+    "ttp_signal": false,
+    "note": "Post-BC-positivity early identification protocols (ePlex/multitest); time to ID, not TTP"
+  },
+  "37449245": {
+    "ttp_signal": true,
+    "note": "BSI neutropenic hematologic; bacterial time to detection differentiates GN vs GP"
+  },
+  "37108896": {
+    "ttp_signal": true,
+    "note": "Mycosis flask vs anaerobic for candidemia; TTP modeled time-to-event 2018 vs 2020"
+  }
+}

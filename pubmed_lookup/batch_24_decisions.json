@@ -1,0 +1,42 @@
+{
+  "9874667": {
+    "ttp_signal": false,
+    "note": "Immune cell/cytokine determinants of BSI outcomes in Thai HIV patients; no TTP measurement."
+  },
+  "10645233": {
+    "ttp_signal": true,
+    "note": "Lysis centrifugation vs pour plate vs broth for melioidosis: median TTP 39.3 vs 45.5 vs 61.8 h (P<0.001); inverse correlation with quantitative load."
+  },
+  "10325369": {
+    "ttp_signal": true,
+    "note": "BACTEC 9240 7-day incubation: TTD distribution for bacteria/yeasts — 4 days sufficient for bacteria, 6 days for yeasts."
+  },
+  "9828828": {
+    "ttp_signal": true,
+    "note": "Continuous monitoring BC for CRBSI: TTP/lag period significantly shorter for central-line vs peripheral BCs; precursor DTP concept."
+  },
+  "9620384": {
+    "ttp_signal": true,
+    "note": "Multicenter BACTEC 9050 vs 9240: TTD compared; anaerobes recovered earlier with 9240 (35.0 vs 61.4 h, P<0.01)."
+  },
+  "9508291": {
+    "ttp_signal": true,
+    "note": "BACTEC Plus/F vs BacT/Alert FAN aerobic+anaerobic: TTD compared; Gram-pos faster on BACTEC, Enterobacteriaceae faster on BacT/Alert."
+  },
+  "9163464": {
+    "ttp_signal": true,
+    "note": "BACTEC 9240 Plus Aerobic/F resin vs Isolator: median TTD favors BACTEC for all pathogens combined (P<0.05); per-species TTD reported."
+  },
+  "9163448": {
+    "ttp_signal": true,
+    "note": "BACTEC 9240 Peds Plus vs Isolator 1.5 for B. melitensis: TTD comparison; 36% of paired-positive cultures positive ≥1 day earlier by BACTEC (P=0.045)."
+  },
+  "9155676": {
+    "ttp_signal": true,
+    "note": "Automated system vs Septichek for CAPD peritonitis: time to detection more rapid with AS (P<0.002); borderline (peritoneal fluid, not blood) but TTD measured."
+  },
+  "9114401": {
+    "ttp_signal": true,
+    "note": "BacT/Alert FAN aerobic vs ESP 80A pediatric BCs: median TTD 13.6 vs 15.7 h (P<0.001)."
+  }
+}

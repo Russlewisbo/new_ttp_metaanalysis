@@ -1,0 +1,42 @@
+{
+  "28701418": {
+    "ttp_signal": false,
+    "note": "Lab workflow/cost analysis of culturing periprosthetic tissues in BC bottles; no TTP measurement."
+  },
+  "28630688": {
+    "ttp_signal": false,
+    "note": "AMR surveillance from Ghana BSI; no TTP/TTD/DTP measurement."
+  },
+  "28589426": {
+    "ttp_signal": false,
+    "note": "Blood culture positivity rates in SSTI by clinical severity; no TTP measurement."
+  },
+  "28296967": {
+    "ttp_signal": true,
+    "note": "Colorimetric sensor array vs BacT/Alert in simulated yeast BCs; TTD compared (CSA 6.8 h faster)."
+  },
+  "28036369": {
+    "ttp_signal": false,
+    "note": "Clinical impact of direct MALDI-ToF post-positivity; analyzes day-2 vs day-1 ID, not TTP."
+  },
+  "27776490": {
+    "ttp_signal": false,
+    "note": "Neonatal BSI epidemiology / antibiotic adequacy in Ghana; no TTP measurement."
+  },
+  "27763479": {
+    "ttp_signal": true,
+    "note": "Conventional BC vs BACTEC 9050: mean time to detection compared (P<0.0001)."
+  },
+  "27757046": {
+    "ttp_signal": false,
+    "note": "Procalcitonin biomarker vs BC findings; no TTP measurement."
+  },
+  "27539221": {
+    "ttp_signal": false,
+    "note": "Trends/epidemiology of BSI at Ghanaian hospital; no TTP measurement."
+  },
+  "27520338": {
+    "ttp_signal": false,
+    "note": "Direct AST method from positive BCs; mentions hours-from-positivity but doesn't measure TTP itself."
+  }
+}

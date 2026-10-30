@@ -1,0 +1,42 @@
+{
+  "32908944": {
+    "ttp_signal": false,
+    "note": "OPAT ceftriaxone vs oxacillin/cefazolin for MSSA BSI; bacteremia duration (days), not BC TTP"
+  },
+  "32839217": {
+    "ttp_signal": false,
+    "note": "MRSA combo BL+VAN/DAP meta-analysis; shortened bacteremia duration (days), not BC TTP"
+  },
+  "32600427": {
+    "ttp_signal": true,
+    "note": "Pediatric CLABSI Sri Lanka long-term CVCs; uses differential TTP (DTP) for CLABSI detection"
+  },
+  "32582483": {
+    "ttp_signal": false,
+    "note": "Pediatric CAP BC value; positivity rate predictors, not TTP"
+  },
+  "32507857": {
+    "ttp_signal": false,
+    "note": "Host immune gene variants (TIRAP SNPs) and SAB duration (days), not BC TTP"
+  },
+  "32404482": {
+    "ttp_signal": true,
+    "note": "COVID-19 BC utilization NYC; reports >98% TTP within 4d (supports shortened incubation)"
+  },
+  "31945052": {
+    "ttp_signal": false,
+    "note": "Typhoid surveillance under-detection / missing-data methods, no TTP"
+  },
+  "31767719": {
+    "ttp_signal": true,
+    "note": "P. aeruginosa BSI mortality; shorter TTP independent predictor of early mortality (aOR 0.88, p=0.010)"
+  },
+  "31636069": {
+    "ttp_signal": false,
+    "note": "Prospective SAB durations cohort (Korea, n=1917); defines new persistent SAB by bacteremia duration days, not BC TTP"
+  },
+  "31365924": {
+    "ttp_signal": false,
+    "note": "IL-1β/IL-10 host responses in SAB vary with therapy; no BC TTP"
+  }
+}

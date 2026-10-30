@@ -1,0 +1,141 @@
+[
+  {
+    "study_id": "IrigoyenSierakowski2024",
+    "qc_summary": "Core fields verified against the PDF; minor study-context corrections (hospital bed count, statistical test attribution, p-value interpretation across 3-group vs 2-group comparison).",
+    "n_discrepancies": 4,
+    "overall_quality": "minor_issues",
+    "discrepancies": [
+      {
+        "table": "tbl_study",
+        "arm_id": "all",
+        "field": "notes",
+        "extracted_value": "Single-center retrospective Gregorio Maranon Madrid. ...",
+        "pdf_value": "1550-bed tertiary teaching hospital",
+        "class": "note_other",
+        "severity": "low",
+        "evidence": "Methods section: 'This retrospective study was carried out in a 1550-bed tertiary teaching hospital in Madrid (Spain) from 2020 to 2022'. Extraction notes do not mention bed count (not a required field, just a note for context)."
+      },
+      {
+        "table": "tbl_outcomes",
+        "arm_id": "all",
+        "field": "p_value",
+        "extracted_value": 0.108,
+        "pdf_value": 0.1081,
+        "class": "note_other",
+        "severity": "low",
+        "evidence": "Table 1: 'Crude mortality rate ... 0.1081'. The reported p applies to the 3-group Kruskal-Wallis comparison (CC, C-RBSI, non-C-RBSI), not to the C-RBSI vs non-C-RBSI 2x2 that the events_short_ttp/events_long_ttp fields construct. Slight rounding (0.108 vs 0.1081) is cosmetic, but attaching the 3-group p-value to a 2-arm comparison may bias the meta-analysis."
+      },
+      {
+        "table": "tbl_outcomes",
+        "arm_id": "all",
+        "field": "notes",
+        "extracted_value": "p=0.002 (Kruskal-Wallis across 3 groups)",
+        "pdf_value": "chi-square test for categorical variables",
+        "class": "error_wrong_value",
+        "severity": "low",
+        "evidence": "Methods 2.2: 'Qualitative clinical variables are expressed as numbers (percentages) and compared using the chi-square test. Quantitative clinical variables ... were compared using the median test.' Treatment success rate is qualitative, so p=0.002 was computed by chi-square (not Kruskal-Wallis). Misnaming the test in notes only; values unchanged."
+      },
+      {
+        "table": "tbl_ttp",
+        "arm_id": "all",
+        "field": "ttp_cutpoint_hours",
+        "extracted_value": 2.0,
+        "pdf_value": 2.0,
+        "class": "note_other",
+        "severity": "low",
+        "evidence": "The 2-h cutoff is on DIFFERENTIAL time to positivity (DTTP = catheter TTP - peripheral TTP), not on the TTP itself reported as median 8.95h. Field is labeled ttp_cutpoint_hours; the cutpoint is on a difference. Extraction notes acknowledge this. Flagging for downstream synthesis; technically not the same construct as Kim2013 or Kahn2021 cutpoints."
+      }
+    ]
+  },
+  {
+    "study_id": "Jayabalakrishnan2022",
+    "qc_summary": "All major numeric and study-design fields verified correctly. No material discrepancies found.",
+    "n_discrepancies": 0,
+    "overall_quality": "good",
+    "discrepancies": []
+  },
+  {
+    "study_id": "Kahn2021",
+    "qc_summary": "Major fields verified. Two notes: study_design enum is debatable (retrospective population-based vs labeled 'population_based_cohort'), and the events_short/long_ttp counts in the mortality outcomes refer to IE vs non-IE groups (not TTP <13h vs >=13h), which the extractor acknowledged.",
+    "n_discrepancies": 2,
+    "overall_quality": "minor_issues",
+    "discrepancies": [
+      {
+        "table": "tbl_study",
+        "arm_id": "all",
+        "field": "study_design",
+        "extracted_value": "population_based_cohort",
+        "pdf_value": "retrospective population-based cohort",
+        "class": "note_other",
+        "severity": "low",
+        "evidence": "Abstract Methods: 'This retrospective population-based study included adults with SAB in 2016 in a derivation cohort and those from 2017 in a validation cohort.' Methods: 'data were analyzed retrospectively.' Enum 'population_based_cohort' captures the population-based feature; 'retrospective_cohort' might be more standard. Defensible either way."
+      },
+      {
+        "table": "tbl_outcomes",
+        "arm_id": "all",
+        "field": "events_short_ttp",
+        "extracted_value": 9,
+        "pdf_value": 9,
+        "class": "note_borderline_eligibility",
+        "severity": "medium",
+        "evidence": "Table 1: '30-day mortality ... 24% (9) IE | 19% (81) No IE'. The fields short_ttp/long_ttp here refer to IE (9/38) vs non-IE (81/427) rather than to a TTP cutpoint of 13h. Paper does not directly tabulate mortality by TTP <13h vs >=13h. Mortality data here is therefore an IE-vs-non-IE comparison; meta-analysis pooling this as TTP-short/long mortality may misattribute the effect. Extractor flagged this in notes; flagging at medium severity because it could materially change pooled estimates."
+      }
+    ]
+  },
+  {
+    "study_id": "Keighley2023",
+    "qc_summary": "Core fields verified. Two notes: outcomes events_short/long_ttp reference KM strata (TTP=1d vs 5+d), not a cutpoint dichotomization, and effect estimate 1.32 is per-day continuous (not per-cutpoint dichotomy).",
+    "n_discrepancies": 2,
+    "overall_quality": "minor_issues",
+    "discrepancies": [
+      {
+        "table": "tbl_outcomes",
+        "arm_id": "all",
+        "field": "events_short_ttp",
+        "extracted_value": 41,
+        "pdf_value": 41,
+        "class": "note_borderline_eligibility",
+        "severity": "medium",
+        "evidence": "Results: 'A TTP of 1 day was associated with a 30-day mortality of 36% [PDF text states 36%; abstract states 37% (41/112)] vs 11% with a TTP of 5 days (Fig. 1).' Counts 41/112 (1d) and 2/18 (5+d) are extreme KM strata, not a cutpoint dichotomization. Reported OR=1.32 is per 1-day continuous TTP, not a binary contrast. Including these as short/long TTP counts in a meta-analysis would conflate continuous effect with dichotomous contrast. Extractor noted this in comments."
+      },
+      {
+        "table": "tbl_outcomes",
+        "arm_id": "all",
+        "field": "outcome_definition",
+        "extracted_value": "All-cause mortality at 30 days",
+        "pdf_value": "All-cause 30-day mortality (29% overall, 120/415 in abstract vs 125/415 in text)",
+        "class": "note_other",
+        "severity": "low",
+        "evidence": "Abstract: 'overall, 30-day mortality was 29% (120/415)'. Results body: 'The overall all-cause 30-day mortality was 29% (125/415).' Paper internal inconsistency. Extractor acknowledged this. Not an extraction error."
+      }
+    ]
+  },
+  {
+    "study_id": "Kim2013",
+    "qc_summary": "Most fields verified. One significant issue: ttp_cutpoint_basis labeled 'ROC_derived' but the 24h cutoff used for the mortality analysis is NOT ROC-derived (paper's 22h cutoff is ROC-derived, only for catheter-related candidemia). Minor: funding source labeled NR but paper says 'routine work'.",
+    "n_discrepancies": 2,
+    "overall_quality": "minor_issues",
+    "discrepancies": [
+      {
+        "table": "tbl_ttp",
+        "arm_id": "all",
+        "field": "ttp_cutpoint_basis",
+        "extracted_value": "ROC_derived",
+        "pdf_value": "other / unspecified (not ROC-derived for mortality endpoint)",
+        "class": "error_wrong_enum",
+        "severity": "medium",
+        "evidence": "Results 'TTP for Candida isolates': 'By ROC curve analysis, the cut-off value of the TTP for catheter-related candidaemia was 22 h, with an area under the curve of 0.67'. The 22h cutoff is ROC-derived for catheter-related candidemia. The 24h cutoff used in mortality analyses (Table 1, Table 2) is not described as ROC-derived; it appears to be a convenience/clinical cutoff. Extractor's own notes flag this ('ROC-derived cutoff of 22h for catheter-related; 24h cutoff used for mortality analysis')."
+      },
+      {
+        "table": "tbl_study",
+        "arm_id": "all",
+        "field": "funding_source",
+        "extracted_value": "NR",
+        "pdf_value": "institutional (no external funding)",
+        "class": "gap_underspecified",
+        "severity": "low",
+        "evidence": "Funding section: 'This study was carried out as part of our routine work.' This indicates no external funding (institutional/internal), which could be coded as 'none' or 'institutional' rather than 'NR'. Minor cosmetic issue."
+      }
+    ]
+  }
+]

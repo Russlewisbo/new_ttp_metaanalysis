@@ -1,0 +1,28 @@
+[
+  {
+    "doc_id": "Zornitzki2024",
+    "decision": "exclude",
+    "exclusion_code": "no_ttp",
+    "first_author": "Zornitzki",
+    "year": 2024,
+    "study_design": "prospective_cohort",
+    "n_total": 131,
+    "population_one_line": "Adult internal medicine patients with bacteremia, paired pre/post-antibiotic blood cultures, Tel Aviv, Israel",
+    "ttp_reported": "Not TTP. Study measured time between antibiotic administration and post-antibiotic blood culture obtainment (mean 6.66 h)",
+    "outcome_one_line": "Outcome = post-antibiotic blood culture positivity (microbiological), not a clinical outcome. OR 0.89 per 60 min for time between antibiotic and BCO",
+    "notes": "The 'time' variable in regression is NOT time-to-positivity; it is time from antibiotic dose to blood culture draw. Outcome is microbiological (BC sterilization), not clinical. Mortality reported descriptively in Table 1 but no TTP-mortality association. Excluded: no TTP exposure as defined for our meta-analysis."
+  },
+  {
+    "doc_id": "Zouggari2022",
+    "decision": "include",
+    "exclusion_code": null,
+    "first_author": "Zouggari",
+    "year": 2022,
+    "study_design": "retrospective_cohort",
+    "n_total": 105,
+    "population_one_line": "Adult anaerobic bacteremia, tertiary hospital, Charleroi, Belgium (2018-2019)",
+    "ttp_reported": "Median TTP 29.9 h (IQR 19.8-47.3); dichotomized at 30 h",
+    "outcome_one_line": "30-day mortality: TTP >=30 h independent protective factor, Cox HR 0.24 (95% CI 0.07-0.84), p=0.025; univariate OR 0.17 (0.06-0.49), p=0.001",
+    "notes": "Clean fit. TTP defined as time from incubation start to detection. Adjusted Cox model includes sepsis, antibiotic adequacy, Charlson, etc. 30-day mortality 21.9%."
+  }
+]

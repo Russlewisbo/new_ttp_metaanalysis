@@ -1,0 +1,51 @@
+doi,pmid,decision,reason,abstract_snippet
+10.1128/jcm.00849-19,31340990,PROMOTE_TIER_1,Explicit "times to detection (TTD)" comparison between BacT/Alert and Bactec bottles,"...similar times to detection (TTD); however, antibiotic-containing BacT/Alert bottles had a shorter TTD compared with antibiotic-containing Bactec bottles..."
+10.3390/antibiotics15040335,42041298,PROMOTE_TIER_1,"End-to-end timeliness study with TTD, TTPR, TTAST KPIs","...key performance indicators...time to detection (TTD), time to preliminary report (TTPR)... Median TTD was 12.6 h..."
+10.2147/idr.s371654,36068835,KEEP_TIER_3,Ethiopian AMR cross-section; no TTP signal,"...Bloodstream infections (BSIs) significant causes of morbidity and mortality in Ethiopia..."
+10.3138/jammi.2.1.007,,UNRESOLVED,No PubMed match,
+10.1016/0732-8893(89)90094-1,,UNRESOLVED,No PubMed match,
+10.1038/s41598-025-86648-x,39962179,KEEP_TIER_3,Ethiopian AMR cross-section; no TTP signal,"...Bloodstream infection identified in 25.5% of suspected septicemia cases..."
+10.2147/plmi.s153444,,UNRESOLVED,No PubMed match,
+10.1097/inf.0000000000000573,25760564,KEEP_TIER_3,"Vancomycin therapy timing; mentions ""duration of bacteremia"" but not TTP","...median duration of bacteremia was 1 day longer in infants with delayed vancomycin..."
+10.1111/odi.14531,,UNRESOLVED,No PubMed match,
+10.1080/1120009x.2017.1282335,,UNRESOLVED,No PubMed match,
+10.1093/tropej/fmx081,,UNRESOLVED,No PubMed match,
+10.1371/journal.pone.0180967,28686744,KEEP_TIER_3,Single vs multiple positive cultures for XDRAB; no TTP,"...patients with multiple-positive blood cultures had greater morbidity and mortality..."
+10.1097/inf.0000000000004439,38905222,PROMOTE_TIER_1,"Persistent S. aureus bacteremia in kids; ""shorter time to culture positivity"" (16h vs 20h)","...children with persistent SAB had a shorter median duration to culture positivity than those without (16 hours vs. 20 hours; P ≤ 0.001)..."
+10.1542/peds.2007-1387,,UNRESOLVED,No PubMed match,
+10.22207/jpam.19.4.28,,UNRESOLVED,No PubMed match,
+10.1007/s10096-026-05425-4,,UNRESOLVED,No PubMed match,
+10.2169/internalmedicine.44.1157,,UNRESOLVED,No PubMed match,
+10.1128/jcm.01296-23,38456690,KEEP_TIER_3,T2Resistance Panel; ""time-to-positive-T2R"" but for assay not blood culture,"...Median time-to-positive-T2R in both hospitals was 4.4 hours..."
+10.1017/ice.2023.249,38073558,KEEP_TIER_3,Diagnostic stewardship intervention for BC ordering; no TTP,"...blood-culture event rate decreased from 100 to 55..."
+10.1002/vetr.5486,,UNRESOLVED,No PubMed match (veterinary),
+10.3390/microorganisms13051041,40431219,KEEP_TIER_3,Rapid AST methods; turnaround time discussed but not TTP,"...turnaround time was analyzed from blood culture positivity to preparation initiation..."
+10.1093/jamia/ocac115,35877074,KEEP_TIER_3,Clinical decision support for BC collection timing; no TTP,"...CDS improved blood culture collection before IV antibiotics..."
+10.1016/j.diagmicrobio.2026.117353,,UNRESOLVED,No PubMed match,
+10.1128/jcm.00307-17,28539343,PROMOTE_TIER_1,"BacT/Alert Virtuo vs BTA3D; ""shorter time to detection"" key finding","...Virtuo detected microbial growth nearly 2 h sooner overall than BTA3D (mean, 15.9 h versus 17.7 h). Shorter time to detection..."
+10.1378/chest.09-2920,,UNRESOLVED,No PubMed match,
+10.16718/j.1009-7708.2018.06.009,,UNRESOLVED,No PubMed match (Chinese journal),
+10.1016/0732-8893(92)90015-l,,UNRESOLVED,No PubMed match,
+10.1016/j.anaerobe.2015.07.010,,UNRESOLVED,No PubMed match,
+10.22207/jpam.18.2.13,,UNRESOLVED,No PubMed match,
+10.1111/j.1469-0691.2005.01269.x,,UNRESOLVED,No PubMed match,
+10.1086/605694,,UNRESOLVED,No PubMed match,
+10.1016/s1525-1578(10)60498-9,15096566,PROMOTE_TIER_1,Real-time PCR adjunct to BACTEC; explicit ""time to positivity"" of Candida,"...established an in vitro correlation between the inoculum of the most frequently encountered Candida species and the time to positivity of these microorganisms..."
+10.1128/jcm.02091-06,17267634,PROMOTE_TIER_1,"BacT/ALERT comparison; ""no significant differences in...times to detection""","...No significant differences in yields or times to detection were found for 387 clinically important isolates..."
+10.1097/inf.0000000000002663,32235247,KEEP_TIER_3,Eagle effect ampicillin; duration of bacteremia but not TTP,"...T > MIC of ≥50% of the dosing interval was associated with decreased duration of bacteremia..."
+10.1080/17843286.2017.1331618,,UNRESOLVED,No PubMed match,
+10.1186/s13613-020-00755-8,33064220,KEEP_TIER_3,"Candidemia epidemiology; ""length of ICU stay at culture positivity"" is a risk factor not TTP","...length of ICU stay at culture positivity was significant risk factor..."
+10.1136/thx.2010.157842,,UNRESOLVED,No PubMed match,
+10.1128/jcm.00927-25,41235945,KEEP_TIER_3,VITEK REVEAL AST; ""time to result"" for AST not TTP,"...time to result (TTR) from blood culture positivity to AST results was compared..."
+10.1128/jcm.18.1.43-48.1983,6350353,PROMOTE_TIER_1,"1983 antimicrobial removal device; ""length of time to detection of positive blood cultures was shorter""","...the length of time to detection of positive blood cultures was shorter with both 16B medium and with Antimicrobial Removal Device-processed cultures..."
+10.14260/jemds/2015/1726,,UNRESOLVED,No PubMed match,
+10.1097/mrm.0b013e32833bb953,,UNRESOLVED,No PubMed match,
+10.1002/pbc.25171,,UNRESOLVED,No PubMed match,
+10.1097/00006565-199406000-00004,,UNRESOLVED,No PubMed match,
+10.1097/ipc.0b013e31827ce847,,UNRESOLVED,No PubMed match,
+10.1016/j.diagmicrobio.2015.09.015,,UNRESOLVED,No PubMed match,
+10.1093/trstmh/traa121,,UNRESOLVED,No PubMed match,
+10.1016/j.burns.2015.07.004,,UNRESOLVED,No PubMed match,
+10.1016/j.tvjl.2009.01.006,,UNRESOLVED,No PubMed match (veterinary),
+10.1186/1471-2334-14-233,24885168,PROMOTE_TIER_1,"BACTEC for prosthetic joint infections; ""shorter time to positivity""","...BACTEC blood culture bottle methods have comparable sensitivity, specificity and a shorter time to positivity..."
+10.1128/jcm.27.7.1588-1593.1989,2671018,PROMOTE_TIER_1,"Lysis-centrifugation in marrow transplant; multiple ""time to detection"" comparisons","...LC methodology had shorter time to detection than the conventional method for detection of Candida spp. and Pseudomonas spp..."

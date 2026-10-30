@@ -1,0 +1,42 @@
+{
+  "9059190": {
+    "ttp_signal": true,
+    "note": "Neonatal BC volume study: explicit TTP outcome (median 22.4 h); no correlation between volume and TTP found."
+  },
+  "8968880": {
+    "ttp_signal": true,
+    "note": "BACTEC Plus/F resin vs BacT/Alert aerobic FAN: average TTD 16.9 vs 18.7 h within first 72 h; large differences for streptococci/yeasts."
+  },
+  "8904411": {
+    "ttp_signal": true,
+    "note": "BACTEC 9240 vs Difco ESP with delayed-entry vials: TTD compared for delayed and non-delayed vials at RT and 35°C."
+  },
+  "8818873": {
+    "ttp_signal": true,
+    "note": "Isolator 1.5 vs BACTEC NR660 6A for pediatric fungemia: mean TTD same in each system; per-isolate timing reported (37 same day, 9 NR6A earlier, 14 ISO earlier)."
+  },
+  "8748264": {
+    "ttp_signal": true,
+    "note": "ESP 80A vs Isolator vs Septi-Chek aerobic: median TTD compared; ESP/Isolator significantly shorter than Septi-Chek (P<0.001)."
+  },
+  "7790471": {
+    "ttp_signal": true,
+    "note": "BacT/Alert standard vs FAN aerobic: mean TTD 16.1 vs 16.0 h; recovery yield improved with FAN."
+  },
+  "7790443": {
+    "ttp_signal": true,
+    "note": "CoNS strain relatedness in multiple BCs: time to growth measured (2.1 vs 1.9 days, related vs unrelated)."
+  },
+  "7615710": {
+    "ttp_signal": true,
+    "note": "ESP 384 vs Septi-Chek pediatric BCs: median TTD 14.0 vs 34.5 h (P<0.001); 78% vs 31% by 24 h."
+  },
+  "7494044": {
+    "ttp_signal": true,
+    "note": "BACTEC 9240 vs BACTEC NR 660 (high-volume aerobic resin): positive cultures detected 4.3 h faster on 9240 (21 vs 25.3 h)."
+  },
+  "7494013": {
+    "ttp_signal": true,
+    "note": "BacT/Alert standard vs FAN anaerobic: mean TTD 14.2 vs 16.1 h; differs by organism (E. coli/anaerobes faster in FAN)."
+  }
+}

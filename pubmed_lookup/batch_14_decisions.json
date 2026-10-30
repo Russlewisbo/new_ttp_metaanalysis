@@ -1,0 +1,42 @@
+{
+  "30623614": {
+    "ttp_signal": true,
+    "note": "Virtuo vs 3D BC systems Korea (n=952); median TTD 11.5h vs 11.8h, shorter in Virtuo for SA/E.coli"
+  },
+  "34368673": {
+    "ttp_signal": false,
+    "note": "BC fill volume QI project (UK); positivity vs volume, not TTP"
+  },
+  "32128336": {
+    "ttp_signal": false,
+    "note": "Intermittent neg BCs in SAB (n=1071); bacteremia duration days, not BC TTP"
+  },
+  "31660401": {
+    "ttp_signal": false,
+    "note": "ASP-led BC communication; time to optimal therapy, not BC TTP"
+  },
+  "31660362": {
+    "ttp_signal": false,
+    "note": "PK/PD obesity vs nonobese Enterobacteriaceae BSI; bacteremia duration (days), not BC TTP"
+  },
+  "31637596": {
+    "ttp_signal": false,
+    "note": "Vanc loading dose MRSA BSI failure; bacteremia duration ≥7d as failure criterion, not BC TTP"
+  },
+  "31456951": {
+    "ttp_signal": true,
+    "note": "BACTEC vs BacT/Alert vs VersaTREK TTD comparison (Chinese tertiary); VersaTREK shortest TTD in abx-free samples"
+  },
+  "31291897": {
+    "ttp_signal": true,
+    "note": "PJI tissue culture in Virtuo BC; median detection time 11.1h, 89% positive ≤24h vs 27% conventional"
+  },
+  "31270693": {
+    "ttp_signal": false,
+    "note": "RESIST-3 immunoassay from positive BC; immunoassay positive in minutes, not BC TTP"
+  },
+  "31161475": {
+    "ttp_signal": true,
+    "note": "Candidemia in immunocompromised ICU; explicitly notes 3d antifungal delay in line with delay of BC positivity"
+  }
+}

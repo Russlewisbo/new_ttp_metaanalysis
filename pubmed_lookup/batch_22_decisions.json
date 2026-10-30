@@ -1,0 +1,42 @@
+{
+  "20042634": {
+    "ttp_signal": true,
+    "note": "MT-PCR vs BC for candidemia: MT-PCR accelerated time to detection by mean 2.2 days (range 0.5-8) — explicit TTP comparison."
+  },
+  "19884371": {
+    "ttp_signal": true,
+    "note": "Cancer candidemia: median incubation period (BC collection → positivity) 32.1 h, associated with in-hospital mortality (HR 1.025/h, P=0.001)."
+  },
+  "19369443": {
+    "ttp_signal": true,
+    "note": "Bactec 9240 vs BacT/Alert for UCB bacterial contamination: median LTD compared (P=0.0449 whole blood, P=0.0037 RBC)."
+  },
+  "17452488": {
+    "ttp_signal": false,
+    "note": "Vancomycin killing activity vs time to clearance of MRSA bacteremia; clearance time is post-treatment duration, not BC TTP."
+  },
+  "17166960": {
+    "ttp_signal": true,
+    "note": "BACTEC PLUS vs BacT/Alert FA with antibiotics: time to detection compared across antibiotic/organism combinations."
+  },
+  "17122016": {
+    "ttp_signal": true,
+    "note": "Clinical comparison VersaTREK vs BacT/ALERT: TTD compared (no overall difference but reported)."
+  },
+  "16757635": {
+    "ttp_signal": true,
+    "note": "BACTEC 9240 vs BacT/Alert for platelet contamination: LTD 1.7 h shorter in BACTEC, statistically significant."
+  },
+  "16390985": {
+    "ttp_signal": true,
+    "note": "HACEK extended BC incubation: average time to detection reviewed; supports dropping extended incubation."
+  },
+  "16259623": {
+    "ttp_signal": false,
+    "note": "Mono- vs polymicrobial P. aeruginosa nBSI: SIRS scores/mortality compared, no TTP measurement."
+  },
+  "15872297": {
+    "ttp_signal": true,
+    "note": "BacT/ALERT FA/FN incubation duration: TTD reviewed for 35,500 BCs; 97.5% of isolates detected in first 3 days."
+  }
+}

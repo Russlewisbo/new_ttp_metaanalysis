@@ -1,0 +1,107 @@
+[
+  {
+    "batch": 7,
+    "file": "pubmed_lookup/remaining_batch_07.json",
+    "size": 11
+  },
+  {
+    "batch": 8,
+    "file": "pubmed_lookup/remaining_batch_08.json",
+    "size": 11
+  },
+  {
+    "batch": 9,
+    "file": "pubmed_lookup/remaining_batch_09.json",
+    "size": 11
+  },
+  {
+    "batch": 10,
+    "file": "pubmed_lookup/remaining_batch_10.json",
+    "size": 11
+  },
+  {
+    "batch": 11,
+    "file": "pubmed_lookup/remaining_batch_11.json",
+    "size": 11
+  },
+  {
+    "batch": 12,
+    "file": "pubmed_lookup/remaining_batch_12.json",
+    "size": 10
+  },
+  {
+    "batch": 13,
+    "file": "pubmed_lookup/remaining_batch_13.json",
+    "size": 10
+  },
+  {
+    "batch": 14,
+    "file": "pubmed_lookup/remaining_batch_14.json",
+    "size": 10
+  },
+  {
+    "batch": 15,
+    "file": "pubmed_lookup/remaining_batch_15.json",
+    "size": 10
+  },
+  {
+    "batch": 16,
+    "file": "pubmed_lookup/remaining_batch_16.json",
+    "size": 10
+  },
+  {
+    "batch": 17,
+    "file": "pubmed_lookup/remaining_batch_17.json",
+    "size": 10
+  },
+  {
+    "batch": 18,
+    "file": "pubmed_lookup/remaining_batch_18.json",
+    "size": 10
+  },
+  {
+    "batch": 19,
+    "file": "pubmed_lookup/remaining_batch_19.json",
+    "size": 10
+  },
+  {
+    "batch": 20,
+    "file": "pubmed_lookup/remaining_batch_20.json",
+    "size": 10
+  },
+  {
+    "batch": 21,
+    "file": "pubmed_lookup/remaining_batch_21.json",
+    "size": 10
+  },
+  {
+    "batch": 22,
+    "file": "pubmed_lookup/remaining_batch_22.json",
+    "size": 10
+  },
+  {
+    "batch": 23,
+    "file": "pubmed_lookup/remaining_batch_23.json",
+    "size": 10
+  },
+  {
+    "batch": 24,
+    "file": "pubmed_lookup/remaining_batch_24.json",
+    "size": 10
+  },
+  {
+    "batch": 25,
+    "file": "pubmed_lookup/remaining_batch_25.json",
+    "size": 10
+  },
+  {
+    "batch": 26,
+    "file": "pubmed_lookup/remaining_batch_26.json",
+    "size": 10
+  },
+  {
+    "batch": 27,
+    "file": "pubmed_lookup/remaining_batch_27.json",
+    "size": 10
+  }
+]

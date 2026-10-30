@@ -1,0 +1,42 @@
+{
+  "26082503": {
+    "ttp_signal": false,
+    "note": "Gentamicin add-on in pediatric E. faecalis bacteremia; outcome 'time to bacterial clearance' (post-tx duration of bacteremia), not BC TTP."
+  },
+  "25994165": {
+    "ttp_signal": false,
+    "note": "Verigene microarray for Gram-neg ID from positive BCs; post-positivity ID, no TTP measurement."
+  },
+  "25740775": {
+    "ttp_signal": true,
+    "note": "Sonication fluid inoculated into BC bottles for OIAI: TTP shorter, 72% detected after 1 day vs conventional cultures."
+  },
+  "25653400": {
+    "ttp_signal": true,
+    "note": "MGIT vs Myco/F lytic for MTB from pleural fluid: TTP 12.7 vs 20.7 days (P=0.007)."
+  },
+  "25098681": {
+    "ttp_signal": true,
+    "note": "BACTEC Mycosis vs Aerobic media for fungi: TTP/TTD significantly shorter in Mycosis (mean 35.5 h for C. glabrata)."
+  },
+  "25473600": {
+    "ttp_signal": true,
+    "note": "Case report: Candida utilis CRBSI diagnosed by paired BC differential time to positivity (DTP)."
+  },
+  "25350577": {
+    "ttp_signal": false,
+    "note": "Methods paper on BC pellet preparation for ID/AST; post-positivity workflow, no TTP measurement."
+  },
+  "24936596": {
+    "ttp_signal": false,
+    "note": "Cefazolin vs oxacillin in MSSA bacteremia; duration of bacteremia (7 vs 3 days) is clearance time, not BC TTP."
+  },
+  "24389282": {
+    "ttp_signal": false,
+    "note": "ICU BSI ecology/AMR surveillance in North India; no TTP measurement."
+  },
+  "24298435": {
+    "ttp_signal": false,
+    "note": "Shaking chills/temperature as predictors of bacteremia; predicts BC positivity, not TTP."
+  }
+}

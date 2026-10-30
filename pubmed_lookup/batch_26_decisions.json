@@ -1,0 +1,42 @@
+{
+  "8195397": {
+    "ttp_signal": true,
+    "note": "Difco ESP vs BACTEC NR660: organisms detected >6 h earlier in ESP, earlier TTD significant overall."
+  },
+  "8195374": {
+    "ttp_signal": true,
+    "note": "Isolator inhibits MAC in BACTEC 12B: TTD 18 d (LJ) vs 24 d (12B) for blood; reverse pattern in non-blood (28 vs 15 d)."
+  },
+  "8051256": {
+    "ttp_signal": true,
+    "note": "ESP vs BacT/Alert continuous-monitoring: aerobic mean TTD 18.3 vs 22.0 h (P<0.001); anaerobes 21.6 vs 50.8 h (P<0.05)."
+  },
+  "7929769": {
+    "ttp_signal": true,
+    "note": "o.a.s.i.s. (headspace pressure) vs BACTEC 460: times to positivity significantly shorter in o.a.s.i.s."
+  },
+  "8463388": {
+    "ttp_signal": true,
+    "note": "Pedi-BacT vs BD 20-ml broth tube: avg TTD compared; Pedi-BacT 11.5-29.7 h vs BD 20.3-66.4 h depending on organism."
+  },
+  "8458950": {
+    "ttp_signal": true,
+    "note": "Multicenter BACTEC 9240 (fluorescent CO2) vs NR 660: avg TTD 20.2 vs 27.5 h; 123 of 420 dual-positives faster in 9240 (P<0.001)."
+  },
+  "1401215": {
+    "ttp_signal": true,
+    "note": "Sentinel vs Bactec: times to positivity (after first 12 h) similar."
+  },
+  "2007644": {
+    "ttp_signal": true,
+    "note": "BACTEC PEDS Plus vs NR-6A pediatric: TTD compared (PEDS Plus earlier for CoNS and H. influenzae, P<0.05 and P<0.01)."
+  },
+  "1939578": {
+    "ttp_signal": true,
+    "note": "BACTEC 26 Plus resin vs Isolator 10: TTD similar; Isolator first positive 59/197 vs BACTEC 45/197 for gram-neg episodes."
+  },
+  "2506221": {
+    "ttp_signal": false,
+    "note": "P. aeruginosa O16 outbreak in heme-onc: duration of bacteremia as outcome predictor, no BC TTP measurement."
+  }
+}
